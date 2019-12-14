@@ -1,0 +1,61 @@
+{% extends 'pearako/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="col-12 col-md-10 projects_page">
+        <div class="row header">
+
+        </div>
+        <div class="row free_space">
+            {% block free_space %}
+            {% endblock %}
+        </div>
+        {% if projects %}
+            <div class="row projects_list">
+                <div class="col-12">
+                    <h2>Projects:</h2>
+
+                    {% for project in projects %}
+                        <div class="row project">
+                            <div class="col-12">
+                                <a href="{% url 'view_project' project_id=project.id %}"><h4>{{ project.name }}</h4></a>
+                            </div>
+                            {% if not forloop.counter|divisibleby:2 %}
+                                <div class="col-12 col-md-4">
+                                    {% with 'project_images/'|add:project.image_name as image_static %}
+                                      <img src="{% static image_static %}" alt="{{ project.name }}">
+                                    {% endwith %}
+
+                                </div>
+                                <div class="col-12 col-md-8">
+                                    <p>
+                                        {% if project.description %}
+                                            {{ project.description }}
+                                        {% else %}
+                                            {{ project.the_ask }}
+                                        {% endif %}
+                                    </p>
+                                </div>
+                            {% else %}
+                                <div class="col-12 col-md-8">
+                                     <p>
+                                        {% if project.description %}
+                                            {{ project.description }}
+                                        {% else %}
+                                            {{ project.the_ask }}
+                                        {% endif %}
+                                    </p>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    {% with 'project_images/'|add:project.image_name as image_static %}
+                                      <img src="{% static image_static %}" alt="{{ project.name }}">
+                                    {% endwith %}
+
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

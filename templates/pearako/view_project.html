@@ -1,0 +1,21 @@
+{% extends 'pearako/base.html' %}
+{% block content %}
+    <div class="col-12 col-md-10">
+        <h1>{{ project.name }}</h1>
+        {% if project.description %}
+            {{ project.description }}
+        {% endif %}
+        {% if project.the_ask %}
+            <h5>The Ask:</h5>
+            {{ project.the_ask }}
+        {% endif %}
+        {% if project.challenges %}
+            <h5>The Challenges:</h5>
+            {{ project.challenges }}
+        {% endif %}
+        {% if project.challenges %}
+            <h5>The Solution:</h5>
+            {{ project.solution }}
+        {% endif %}
+    </div>
+{% endblock %}

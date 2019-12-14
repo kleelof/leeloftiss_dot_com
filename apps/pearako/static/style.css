@@ -1,0 +1,23 @@
+#header{
+
+}
+
+#server_messages .error{
+    color: orangered;
+}
+
+#server_messages .success{
+    color: green;
+}
+
+.projects_list .project{
+    margin-top: 10px;
+}
+
+.projects_list .project p{
+    font-size: 1.25em;
+}
+
+.projects_list .project img{
+    width: 100%;
+}
