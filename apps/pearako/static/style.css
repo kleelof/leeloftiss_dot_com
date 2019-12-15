@@ -20,4 +20,10 @@
 
 .projects_list .project img{
     width: 100%;
+    padding: 3px;
+    border: 2px solid black;
+}
+
+.projects_list .project h4{
+    font-weight: bold;
 }

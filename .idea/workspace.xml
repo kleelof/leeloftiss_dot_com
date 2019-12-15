@@ -1,44 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="278afd88-c908-4f20-b775-6efa06c516eb" name="Default Changelist" comment="Configured">
-      <change afterPath="$PROJECT_DIR$/apps/meal_delivery/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/meal_delivery/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/meal_delivery/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/meal_delivery/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/meal_delivery/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/meal_delivery/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/meal_delivery/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/meal_delivery/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/pearako/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/pearako/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/pearako/migrations/0002_projects_image_name.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/pearako/migrations/0003_auto_20191214_1427.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/pearako/migrations/0004_projects_show_on_bootcamp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/pearako/static/project_images/17684-hendrix-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/pearako/static/project_images/stockmarket_heater.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_website/settings/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_website/settings/development.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my_website/settings/production.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pearako/all_projects.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pearako/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pearako/bootcamp.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pearako/jewels.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pearako/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pearako/projects_page_base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pearako/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pearako/view_project.html" afterDir="false" />
+    <list default="true" id="278afd88-c908-4f20-b775-6efa06c516eb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/apps/pearako/migrations/0005_projects_has_demo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/pearako/migrations/0006_projects_follow_up.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/pearako/static/max_diamond/images/blue_diamond.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/pearako/static/max_diamond/images/brick_wall.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/pearako/static/max_diamond/images/max.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/pearako/static/max_diamond/images/max_diamond_logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/pearako/static/max_diamond/images/monster_0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/pearako/static/max_diamond/images/monster_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/pearako/static/max_diamond/images/monster_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/pearako/static/max_diamond/images/rainbow_diamond.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/pearako/static/max_diamond/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/pearako/static/max_diamond/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/pearako/static/project_images/max_diamond.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/pearako/utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pearako/demo_projects/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pearako/demo_projects/max_diamond.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/pearako/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/pearako/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/pearako/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/pearako/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/pearako/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/apps/pearako/static/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/pearako/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/pearako/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/pearako/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/pearako/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_website/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_website/settings/base.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_website/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_website/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pearako/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pearako/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pearako/pearako_base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pearako/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pearako/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pearako/bootcamp.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pearako/bootcamp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pearako/projects_page_base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pearako/projects_page_base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pearako/view_project.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pearako/view_project.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,11 +91,13 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/pearako" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/apps/pearako/static/max_diamond/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/pearako/static/max_diamond/images" />
+      <recent name="$PROJECT_DIR$/apps/pearako/static/max_diamond" />
       <recent name="$PROJECT_DIR$/templates/pearako" />
       <recent name="$PROJECT_DIR$/my_website" />
     </key>
@@ -168,43 +158,55 @@
       <option name="project" value="LOCAL" />
       <updated>1576346905291</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial portfolio management and navigation&#10;Added projects pages: Favorites, Bootcamp, all and home page">
+      <created>1576363992922</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1576363992922</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Configured" />
-    <option name="LAST_COMMIT_MESSAGE" value="Configured" />
+    <MESSAGE value="Initial portfolio management and navigation&#10;Added projects pages: Favorites, Bootcamp, all and home page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial portfolio management and navigation&#10;Added projects pages: Favorites, Bootcamp, all and home page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2018" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576348866922">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="2018" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576348866922" />
-    <state x="1964" y="135" width="1181" height="807" key="CommitChangelistDialog2" timestamp="1576349044357">
+    <state x="1964" y="135" width="1181" height="807" key="CommitChangelistDialog2" timestamp="1576363992838">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state x="1964" y="135" width="1181" height="807" key="CommitChangelistDialog2/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576349044357" />
+    <state x="1964" y="135" width="1181" height="807" key="CommitChangelistDialog2/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576363992838" />
     <state x="2297" y="299" width="515" height="479" key="EnvironmentVariablesDialog" timestamp="1576348416983">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="2297" y="299" width="515" height="479" key="EnvironmentVariablesDialog/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576348416983" />
-    <state width="1874" height="287" key="GridCell.Tab.0.bottom" timestamp="1576363221510">
+    <state x="2343" y="297" width="424" height="484" key="FileChooserDialogImpl" timestamp="1576364842279">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="287" key="GridCell.Tab.0.bottom/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576363221510" />
-    <state width="1874" height="287" key="GridCell.Tab.0.center" timestamp="1576363221510">
+    <state x="2343" y="297" width="424" height="484" key="FileChooserDialogImpl/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576364842279" />
+    <state width="1874" height="287" key="GridCell.Tab.0.bottom" timestamp="1576366948768">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="287" key="GridCell.Tab.0.center/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576363221510" />
-    <state width="1874" height="287" key="GridCell.Tab.0.left" timestamp="1576363221509">
+    <state width="1874" height="287" key="GridCell.Tab.0.bottom/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576366948768" />
+    <state width="1874" height="287" key="GridCell.Tab.0.center" timestamp="1576366948768">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="287" key="GridCell.Tab.0.left/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576363221509" />
-    <state width="1874" height="287" key="GridCell.Tab.0.right" timestamp="1576363221510">
+    <state width="1874" height="287" key="GridCell.Tab.0.center/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576366948768" />
+    <state width="1874" height="287" key="GridCell.Tab.0.left" timestamp="1576366948767">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state width="1874" height="287" key="GridCell.Tab.0.right/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576363221510" />
+    <state width="1874" height="287" key="GridCell.Tab.0.left/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576366948767" />
+    <state width="1874" height="287" key="GridCell.Tab.0.right" timestamp="1576366948768">
+      <screen x="1600" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="287" key="GridCell.Tab.0.right/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576366948768" />
     <state width="1874" height="354" key="GridCell.Tab.1.bottom" timestamp="1576362411546">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
@@ -221,10 +223,10 @@
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="354" key="GridCell.Tab.1.right/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576362411546" />
-    <state x="2155" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1576345480938">
+    <state x="2155" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1576364003732">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
-    <state x="2155" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576345480938" />
+    <state x="2155" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576364003732" />
     <state x="2216" y="366" key="com.intellij.ide.util.TipDialog" timestamp="1576345128542">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>

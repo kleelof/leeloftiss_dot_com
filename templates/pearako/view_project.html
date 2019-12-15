@@ -17,5 +17,9 @@
             <h5>The Solution:</h5>
             {{ project.solution }}
         {% endif %}
+        {% if project.has_demo %}
+            <h5><a href="{% url 'demo_project' project_slug=project.slug %}">Try It Out</a></h5>
+            {{ project.solution }}
+        {% endif %}
     </div>
 {% endblock %}

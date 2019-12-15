@@ -1,7 +1,7 @@
 from django.urls import path
 from django.views.generic import TemplateView
 
-from .views import index, login, logout, register, view_project
+from .views import index, login, logout, register, view_project, demo_project
 
 urlpatterns = [
     path('', index, name='index'),
@@ -12,4 +12,5 @@ urlpatterns = [
     path('bootcamp/', index, name='bootcamp_projects'),
     path('all_projects/', index, name='all_projects'),
     path('view_project/<int:project_id>', view_project, name='view_project'),
+    path('demo_project/<str:project_slug>', demo_project, name='demo_project'),
 ]

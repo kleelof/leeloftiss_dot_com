@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from .forms import RegistrationForm
 from .models import Projects
+from .utils import _get_project_by_id, _get_project_by_slug
 
 
 def index(request):
@@ -61,8 +62,19 @@ def register(request):
 
 
 def view_project(request, project_id):
-    projects = Projects.objects.filter(id=project_id)
-    if not projects:
+    project = _get_project_by_id(project_id)
+    if not project:
         messages.error(request, 'Invalid Project')
         return redirect('index')
-    return render(request, 'pearako/view_project.html', {'project': projects[0]})
+    return render(request, 'pearako/view_project.html', {'project': project})
+
+
+def demo_project(request, project_slug):
+    project = _get_project_by_slug(project_slug)
+    if not project:
+        messages.error(request, 'Invalid Project')
+        return redirect('index')
+    return render(request, f'pearako/demo_projects/{project.slug}.html', {'project': project})
+
+
+

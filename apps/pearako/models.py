@@ -15,6 +15,7 @@ class Projects(models.Model):
     show_on_home = models.BooleanField(default=False)
     show_on_jewels = models.BooleanField(default=False)
     show_on_bootcamp = models.BooleanField(default=False)
+    has_demo = models.BooleanField(default=False)
     github_link = models.CharField(max_length=256, blank=True)
     external_link = models.CharField(max_length=256, blank=True)
     image_name = models.CharField(max_length=256, blank=True)
@@ -22,6 +23,7 @@ class Projects(models.Model):
     the_ask = models.TextField(blank=True)
     challenges = models.TextField(blank=True)
     solution = models.TextField(blank=True)
+    follow_up = models.TextField(blank=True)
 
     technologies = models.ManyToManyField(Technologies, related_name='projects')
 

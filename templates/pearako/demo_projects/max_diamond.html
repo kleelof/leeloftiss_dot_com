@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Max Diamond Maze Master</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'max_diamond/style.css' %}">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="score_board">
+            <div id="score" class="score_board_panel"></div>
+            <div id="lives" class="score_board_panel"> </div>
+        </div>
+        <div id="game_board"></div>
+        <div id="max"> <img src="{% static 'max_diamond/images/max.png' %}"> </div>
+        <div id="monsters">
+            <div id="monster_0" class="monster"><img src="{% static 'max_diamond/images/monster_0.png' %}"></div>
+            <div id="monster_1" class="monster"><img src="{% static 'max_diamond/images/monster_1.png' %}"></div>
+            <div id="monster_2" class="monster"><img src="{% static 'max_diamond/images/monster_2.png' %}"></div>
+        </div>
+        <div id="start_splash_screen" class="splash_screen">
+            <img src="{% static 'max_diamond/images/max_diamond_logo.png' %}">
+        </div>
+        <div id="level_screen" class="splash_screen">
+            Level:
+            <div id="level_text"></div>
+        </div>
+        <div id="level_cleared" class="splash_screen">
+            LEVEL CLEARED!
+            GOOD JOB!
+        </div>
+        <div id="game_over" class="splash_screen">
+            GAME OVER!!
+        </div>
+    </div>
+    <script src="{% static 'max_diamond/script.js' %}"></script>
+</body>
+</html>
