@@ -1,0 +1,66 @@
+{% extends 'meal_delivery/base.html' %}
+{% block content %}
+    {% for message in messages %}
+        {{ message }}
+    {% endfor %}
+    <div class="col-12 col-md-10">
+        <form class="row" method="POST" action="{% url 'md_profile' %}">
+            {% csrf_token %}
+            <div class="col-12 col-md-5">
+                <h3>Personal Information:</h3>
+                <div class="form-group">
+                    <label for="first_name">First Name:</label>
+                    <input type="text" class="form-control" id="first_name" name="first_name" value="{{ form.first_name.value | default_if_none:'' }}">
+                    <div>{{ form.first_name.errors }}</div>
+                </div>
+                <div class="form-group">
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" class="form-control" id="last_name" name="last_name" value="{{ form.last_name.value | default_if_none:'' }}">
+                    <div>{{ form.last_name.errors }}</div>
+                </div>
+                <div class="form-group">
+                    <label for="address1">Address:</label>
+                    <input type="text" class="form-control" id="address1" name="address1" value="{{ form.address1.value | default_if_none:'' }}">
+                    <div>{{ form.address1.errors }}</div>
+                </div>
+                <div class="form-group">
+                    <label for="address2">Address:</label>
+                    <input type="text" class="form-control" id="address2" name="address2" value="{{ form.address2.value | default_if_none:'' }}">
+                    <div>{{ form.address2.errors }}</div>
+                </div>
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" class="form-control" id="city" name="city" value="{{ form.city.value | default_if_none:'' }}">
+                    <div>{{ form.city.errors }}</div>
+                </div>
+                <div class="form-group">
+                    <label for="state">State:</label>
+                    <input type="text" class="form-control" id="state" name="state" value="{{ profile.state.value | default_if_none:'' }}">
+                    <div>{{ form.state.errors }}</div>
+                </div>
+                <div class="form-group">
+                    <label for="zip_code">Zip Code:</label>
+                    <input type="text" class="form-control" id="zip_code" name="zip_code" value="{{ profile.state.value | default_if_none:'' }}">
+                    <div>{{ form.zip_code.errors }}</div>
+                </div>
+            </div>
+            <div class="col-12 col-md-5">
+                <h3>Allergens:</h3>
+                <p>Select allergens that affect you. We will highlight meals that contain these allergens</p>
+                <table>
+                    <tbody>
+                        {% for allergen in  allergens %}
+                            <tr>
+                                <td><input type="checkbox" name="allergens" value="{{ allergen.id }}"></td>
+                            <td>{{ allergen.name }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-12 col-md-10">
+                    <button type="submit">Update</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

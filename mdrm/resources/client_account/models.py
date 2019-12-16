@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 from mdrm.mdrm import MDRMModel
 from mdrm.models import Allergen
 from mdrm.resources.client_account.managers import ProfileManager
@@ -13,5 +14,6 @@ class Profile(MDRMModel):
     state = models.CharField(max_length=100)
     zip_code = models.CharField(max_length=25)
 
+    user = models.OneToOneField(User, related_name='profile', on_delete=models.CASCADE)
     allergens = models.ManyToManyField(Allergen, related_name='profiles')
     object = ProfileManager()
