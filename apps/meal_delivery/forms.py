@@ -12,7 +12,7 @@ class ProfileForm(forms.ModelForm):
     zip_code = forms.CharField(max_length=25)
 
     CHOICES = tuple((o.pk, o.name) for o in Allergen.objects.all())
-    allergens = forms.MultipleChoiceField(choices=CHOICES)
+    allergens = forms.MultipleChoiceField(choices=CHOICES, required=False)
 
     class Meta:
         model = Profile

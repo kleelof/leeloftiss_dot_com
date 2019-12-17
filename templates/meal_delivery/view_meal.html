@@ -1,0 +1,21 @@
+{% extends 'meal_delivery/base.html' %}
+{% load static %}
+{% block content %}
+    {% if not meal %}
+        Invalid meal
+    {% else %}
+        <div class="col-12 col-md-10 view_meal">
+            <h2>{{ meal.name }}</h2>
+            <div class="row meal">
+                <div class="col-12 col-md-5">
+                    {% with 'meal_photos/'|add:meal.image as image_static %}
+                        <img src="{% static image_static %}" alt="{{ meal.name }}">
+                    {% endwith %}
+                </div>
+                <div class="col-12 col-md-7">
+                    <p>{{ meal.description }}</p>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

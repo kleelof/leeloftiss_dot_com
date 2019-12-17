@@ -1,4 +1,17 @@
 {% extends 'meal_delivery/base.html' %}
 {% block content %}
-    index page
+    <div class="col-12 col-md-10">
+        {% if upcoming_windows %}
+            <h3>Upcoming Delivery Windows:</h3>
+            {% for window in upcoming_windows %}
+                <div class="upcoming_window">
+                    <a href="{% url 'delivery_window' window_id=window.id %}">
+                        {{ window.open|date:'l M, j Y' }} between {{ window.open|date:'P' }} and {{ window.close|date:'P' }}
+                    </a>
+                </div>
+            {% endfor %}
+        {% else %}
+            <h3>There are no upcoming delivery windows</h3>
+        {% endif %}
+    </div>
 {% endblock %}
