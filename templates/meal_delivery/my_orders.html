@@ -1,0 +1,43 @@
+{% extends 'meal_delivery/base.html' %}
+{% load static %}
+
+{% block js %}
+    <script>
+        remove_link = '/meal_delivery/remove_order/';
+    </script>
+    <script src="{% static "js/my_orders.js" %}"> </script>
+{% endblock %}
+
+{% block content %}
+    <div class="col-12 col-md-10 my_orders">
+        {% if not orders %}
+            You have no pending orders
+        {% else %}
+            <h4>My Orders</h4>
+            {% for order in orders %}
+                <div class="row order">
+                    <div class="col-12">
+                        <h5>{{ order.delivery_window.date|date:'l M, j Y' }}</h5>
+                    </div>
+                    <div class="col-12 associated_meals">
+                        <div class="row">
+                            <div class="col-12">
+                                {% for order in order.orders %}
+                                    <div class="meal">
+                                        <a href="{% url 'md_view_meal_by_window' meal_id=order.meal.id window_id=order.delivery_window.id %}">
+                                            {% with 'meal_photos/'|add:order.meal.image as image_static %}
+                                                <img src="{% static image_static %}" alt="{{ order.meal.name }}">
+                                            {% endwith %}
+                                        </a>
+                                        <div class="name">{{ order.meal.name }} - {{ order.quantity|floatformat:"0" }}</div>
+                                        <div id="del_{{ order.id }}" class="remove_btn">X</div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock %}

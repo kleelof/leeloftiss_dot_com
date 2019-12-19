@@ -1,6 +1,156 @@
+img{
+    width: 100%
+}
+
+/* base.html */
+#header img{
+    width: 100%
+}
+
+#content{
+    margin-top: 10px;
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: deepskyblue;
+}
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: deepskyblue;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+/* view meal */
 .view_meal .meal{
 
 }
+
 .view_meal .meal img{
     width: 100%;
+}
+.view_meal .meal .left_frame{
+    text-align: center;
+}
+
+/* upcoming_windows */
+.upcoming_windows{
+
+}
+.upcoming_windows .window{
+    text-align: left;
+    margin-top: 10px;
+}
+.upcoming_windows .meal{
+    text-align: center;
+}
+
+/* associated meal */
+.associated_meals{}
+.associated_meals .meal{
+    display: inline-block;
+    width: 250px;
+    border: 1px solid deepskyblue;
+    margin: 5px;
+    position: relative;
+}
+.associated_meals .remove_btn{
+    display: inline-block;
+    padding: 2px;
+    background-color: skyblue;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    cursor: pointer;
+}
+.associated_meals .remove_btn:hover{
+    background-color: deepskyblue;
+}
+
+/* ordering  bar */
+.ordering_bar{
+    display: inline-block;
+    padding: 5px 0;
+    background-color: whitesmoke;
+    margin-top: 5px;
+}
+
+/* number selector and add to order button */
+.num_selector{
+    display: inline-block;
+    height: 50px;
+    border: 1px solid darkgrey;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-align: center;
+}
+.num_selector .selector{
+    display: inline-block;
+    width: 30px;
+    height: 100%;
+    padding-top: 7px
+}
+.num_selector .selector:hover{
+    background-color: #bbb;
+    cursor: pointer;
+}
+.num_selector .number{
+    display: inline-block;
+    width: 70px;
+    height: 100%;
+    padding-top: 7px
+}
+
+.add_to_order_btn{
+    display: inline-block;
+    height: 50px;
+    border: 1px solid darkgrey;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-align: center;
+    padding: 7px 3px 0 3px;
+}
+.add_to_order_btn:hover{
+    background-color: #bbb;
+    cursor:pointer;
+}
+
+/* delivery window */
+.delivery_window .meal img{
+    width: 100%;
+}
+
+.delivery_window .meal{
+    margin-bottom: 10px !important;
+}
+
+/* navbar */
+.navbar-custom {
+    background-color: #28d0ff;
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255,255,255,1);
+    font-weight: bold;
+}
+/* change the link color */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(255,255,255,.8);
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
 }

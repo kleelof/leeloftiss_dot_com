@@ -1,9 +1,6 @@
 {% extends 'meal_delivery/base.html' %}
 {% block content %}
-    {% for message in messages %}
-        {{ message }}
-    {% endfor %}
-    <div class="col-12 col-md-10">
+     <div class="col-12 col-md-10">
         <form class="row" method="POST" action="{% url 'md_profile' %}">
             {% csrf_token %}
             <div class="col-12 col-md-5">
@@ -51,7 +48,13 @@
                     <tbody>
                         {% for allergen in  allergens %}
                             <tr>
-                                <td><input type="checkbox" name="allergens" value="{{ allergen.id }}"></td>
+                                <td>
+                                    <input type="checkbox" name="allergens" value="{{ allergen.id }}"
+                                           {% if allergen.id in form.allergens.value %}
+                                               checked="checked"
+                                            {% endif %}
+                                        >
+                                </td>
                             <td>{{ allergen.name }}</td>
                             </tr>
                         {% endfor %}

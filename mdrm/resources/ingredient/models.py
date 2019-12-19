@@ -12,7 +12,7 @@ class Allergen(MDRMModel):
 class Ingredient(MDRMModel):
     name = models.CharField(max_length=200)
 
-    allergens = models.ManyToManyField(Allergen, related_name='ingredients')
+    allergens = models.ManyToManyField(Allergen, related_name='ingredients', blank=True)
 
     def __str__(self):
         return self.name

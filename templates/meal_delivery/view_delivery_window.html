@@ -1,16 +1,27 @@
 {% extends 'meal_delivery/base.html' %}
+{% load static %}
 {% block content %}
-    <div class="col-12 col-md-10">
+    <div class="col-12 col-md-10 delivery_window">
         <h3>{{ window.open|date:'l M, j Y' }} between {{ window.open|date:'P' }} and {{ window.close|date:'P' }}</h3>
         {% if not window.meals %}
             There are no meals for this window
         {% else %}
             <div class="row">
                 {% for meal in window.meals.all %}
-                    <div class="col-12">
-                    <a href="{% url 'view_meal' meal_id=meal.id %}">
-                        <h5>{{ meal.name }}</h5>
-                    </a>
+                    <div class="col-12 col-md-6 meal">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                {%  with 'meal_photos/'|add:meal.image as static_image%}
+                                    <img src="{% static static_image %}" alt="{{ meal.name }}">
+                                {% endwith %}
+                            </div>
+                            <div class="col-12 col-md-6 description">
+                                <a href="{% url 'md_view_meal' meal_id=meal.id %}">
+                                    <h5>{{ meal.name }}</h5>
+                                </a>
+                                <p>{{ meal.description|truncatewords:30 }}</p>
+                            </div>
+                        </div>
                     </div>
                 {% endfor %}
             </div>

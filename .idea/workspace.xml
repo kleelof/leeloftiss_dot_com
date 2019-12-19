@@ -2,29 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="278afd88-c908-4f20-b775-6efa06c516eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/meal_delivery/static/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/meal_delivery/static/meal_photos/green-curry-noodle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/meal_delivery/static/meal_photos/khao-soi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/meal_delivery/static/meal_photos/pad-mee.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/meal_delivery/static/meal_photos/pad-thai.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mdrm/migrations/0005_meal_image.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mdrm/migrations/0006_deliverywindow_meals.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mdrm/migrations/0007_deliverywindow_name.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mdrm/migrations/0008_auto_20191217_0828.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/meal_delivery/view_delivery_window.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/meal_delivery/view_meal.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/meal_delivery/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/meal_delivery/static/images/header.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/meal_delivery/static/js/my_orders.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/meal_delivery/static/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mdrm/migrations/0009_auto_20191217_1234.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mdrm/migrations/0010_auto_20191217_1242.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mdrm/migrations/0011_meal_recipes.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mdrm/migrations/0012_auto_20191217_1301.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mdrm/migrations/0013_auto_20191217_1301.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mdrm/migrations/0014_auto_20191217_1917.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mdrm/migrations/0015_auto_20191217_1945.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mdrm/migrations/0016_auto_20191217_1947.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mdrm/migrations/0017_auto_20191218_0611.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mdrm/migrations/0018_auto_20191218_1114.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mdrm/migrations/0019_order_user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mdrm/migrations/0020_auto_20191218_1302.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mdrm/migrations/0021_auto_20191218_1728.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mdrm/migrations/0022_auto_20191218_1729.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mdrm/migrations/0023_auto_20191218_1732.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/meal_delivery/my_orders.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/meal_delivery/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/meal_delivery/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/meal_delivery/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/mdrm/resources/delivery/managers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/meal_delivery/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/meal_delivery/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/meal_delivery/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/meal_delivery/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/meal_delivery/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/apps/meal_delivery/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/meal_delivery/static/meal_photos/green-curry-noodle.png" beforeDir="false" afterPath="$PROJECT_DIR$/apps/meal_delivery/static/meal_photos/green-curry-noodle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/meal_delivery/static/meal_photos/pad-mee.png" beforeDir="false" afterPath="$PROJECT_DIR$/apps/meal_delivery/static/meal_photos/pad-mee.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/meal_delivery/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/meal_delivery/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/meal_delivery/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/meal_delivery/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mdrm/mdrm.py" beforeDir="false" afterPath="$PROJECT_DIR$/mdrm/mdrm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mdrm/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mdrm/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mdrm/resources/client_account/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mdrm/resources/client_account/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mdrm/resources/delivery/managers.py" beforeDir="false" afterPath="$PROJECT_DIR$/mdrm/resources/delivery/managers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mdrm/resources/delivery/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mdrm/resources/delivery/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mdrm/resources/delivery/resource.py" beforeDir="false" afterPath="$PROJECT_DIR$/mdrm/resources/delivery/resource.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mdrm/resources/ingredient/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mdrm/resources/ingredient/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mdrm/resources/menu/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mdrm/resources/menu/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mdrm/resources/menu/resource.py" beforeDir="false" afterPath="$PROJECT_DIR$/mdrm/resources/menu/resource.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mdrm/resources/order/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mdrm/resources/order/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/meal_delivery/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/meal_delivery/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/meal_delivery/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/meal_delivery/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/meal_delivery/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/meal_delivery/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/meal_delivery/view_delivery_window.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/meal_delivery/view_delivery_window.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/meal_delivery/view_meal.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/meal_delivery/view_meal.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +85,7 @@
         <option value="CSS File" />
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -91,17 +110,17 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/apps/pearako" />
-      <recent name="$PROJECT_DIR$/my_website" />
-      <recent name="$PROJECT_DIR$/my_website/settings" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/apps/pearako/static/max_diamond/images" />
       <recent name="$PROJECT_DIR$/apps/pearako/static/max_diamond" />
       <recent name="$PROJECT_DIR$/templates/pearako" />
+      <recent name="$PROJECT_DIR$/my_website" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/meal_delivery/static/css" />
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/apps/pearako" />
       <recent name="$PROJECT_DIR$/my_website" />
     </key>
   </component>
@@ -183,7 +202,11 @@
       <updated>1576457723653</updated>
       <workItem from="1576457728531" duration="12000" />
       <workItem from="1576523345680" duration="10622000" />
-      <workItem from="1576587346062" duration="13783000" />
+      <workItem from="1576587346062" duration="19305000" />
+      <workItem from="1576621079004" duration="15772000" />
+      <workItem from="1576674644261" duration="4375000" />
+      <workItem from="1576694010472" duration="8485000" />
+      <workItem from="1576717030102" duration="11321000" />
     </task>
     <task id="LOCAL-00005" summary="Began building out the Meal Delivery demo&#10;Profile">
       <created>1576534340558</created>
@@ -192,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576534340558</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Added views for:&#10;listing delivery windows&#10;listing meals for individual windows&#10;displaying individual meals">
+      <created>1576605257589</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1576605257589</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,18 +235,21 @@
     <MESSAGE value="Can now add a demo for projects &#10;added max diamond" />
     <MESSAGE value="Added MDRM&#10;Built out initial resources" />
     <MESSAGE value="Began building out the Meal Delivery demo&#10;Profile" />
-    <option name="LAST_COMMIT_MESSAGE" value="Began building out the Meal Delivery demo&#10;Profile" />
+    <MESSAGE value="Added views for:&#10;listing delivery windows&#10;listing meals for individual windows&#10;displaying individual meals" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added views for:&#10;listing delivery windows&#10;listing meals for individual windows&#10;displaying individual meals" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2018" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576348866922">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="2018" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576348866922" />
-    <state x="1964" y="135" width="1181" height="807" key="CommitChangelistDialog2" timestamp="1576534340468">
-      <screen x="1600" y="0" width="1920" height="1080" />
+    <state x="1804" y="135" width="1181" height="807" key="CommitChangelistDialog2" timestamp="1576765573207">
+      <screen x="1440" y="0" width="1920" height="1080" />
     </state>
+    <state x="1732" y="135" key="CommitChangelistDialog2/0.312.1368.768/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576605256138" />
     <state x="1964" y="135" width="1181" height="807" key="CommitChangelistDialog2/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576534340468" />
     <state x="358" y="316" key="CommitChangelistDialog2/67.207.1533.873/1600.0.1920.1080@67.207.1533.873" timestamp="1576457608851" />
+    <state x="1804" y="135" key="CommitChangelistDialog2/67.297.1373.783/1440.0.1920.1080@1440.0.1920.1080" timestamp="1576765573207" />
     <state x="2297" y="299" width="515" height="479" key="EnvironmentVariablesDialog" timestamp="1576348416983">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
@@ -225,72 +258,102 @@
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="2343" y="297" width="424" height="484" key="FileChooserDialogImpl/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576364842279" />
-    <state width="1874" height="285" key="GridCell.Tab.0.bottom" timestamp="1576601464633">
-      <screen x="1368" y="0" width="1920" height="1080" />
+    <state width="1634" height="292" key="GridCell.Tab.0.bottom" timestamp="1576765126567">
+      <screen x="1440" y="0" width="1920" height="1080" />
     </state>
+    <state width="1874" height="285" key="GridCell.Tab.0.bottom/0.312.1368.768/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576616510100" />
     <state width="1874" height="303" key="GridCell.Tab.0.bottom/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576535067050" />
     <state width="1874" height="354" key="GridCell.Tab.0.bottom/67.207.1533.873/1600.0.1920.1080@67.207.1533.873" timestamp="1576457706614" />
+    <state width="1874" height="303" key="GridCell.Tab.0.bottom/67.27.3453.1053@67.27.3453.1053" timestamp="1576705275897" />
+    <state width="1634" height="292" key="GridCell.Tab.0.bottom/67.297.1373.783/1440.0.1920.1080@1440.0.1920.1080" timestamp="1576765126567" />
     <state width="1874" height="285" key="GridCell.Tab.0.bottom/67.339.1301.741/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576601464633" />
-    <state width="1874" height="285" key="GridCell.Tab.0.center" timestamp="1576601464633">
-      <screen x="1368" y="0" width="1920" height="1080" />
+    <state width="1634" height="292" key="GridCell.Tab.0.center" timestamp="1576765126566">
+      <screen x="1440" y="0" width="1920" height="1080" />
     </state>
+    <state width="1874" height="285" key="GridCell.Tab.0.center/0.312.1368.768/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576616510100" />
     <state width="1874" height="303" key="GridCell.Tab.0.center/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576535067049" />
     <state width="1874" height="354" key="GridCell.Tab.0.center/67.207.1533.873/1600.0.1920.1080@67.207.1533.873" timestamp="1576457706614" />
+    <state width="1874" height="303" key="GridCell.Tab.0.center/67.27.3453.1053@67.27.3453.1053" timestamp="1576705275897" />
+    <state width="1634" height="292" key="GridCell.Tab.0.center/67.297.1373.783/1440.0.1920.1080@1440.0.1920.1080" timestamp="1576765126566" />
     <state width="1874" height="285" key="GridCell.Tab.0.center/67.339.1301.741/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576601464633" />
-    <state width="1874" height="285" key="GridCell.Tab.0.left" timestamp="1576601464633">
-      <screen x="1368" y="0" width="1920" height="1080" />
+    <state width="1634" height="292" key="GridCell.Tab.0.left" timestamp="1576765126566">
+      <screen x="1440" y="0" width="1920" height="1080" />
     </state>
+    <state width="1874" height="285" key="GridCell.Tab.0.left/0.312.1368.768/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576616510100" />
     <state width="1874" height="303" key="GridCell.Tab.0.left/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576535067049" />
     <state width="1874" height="354" key="GridCell.Tab.0.left/67.207.1533.873/1600.0.1920.1080@67.207.1533.873" timestamp="1576457706614" />
+    <state width="1874" height="303" key="GridCell.Tab.0.left/67.27.3453.1053@67.27.3453.1053" timestamp="1576705275897" />
+    <state width="1634" height="292" key="GridCell.Tab.0.left/67.297.1373.783/1440.0.1920.1080@1440.0.1920.1080" timestamp="1576765126566" />
     <state width="1874" height="285" key="GridCell.Tab.0.left/67.339.1301.741/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576601464633" />
-    <state width="1874" height="285" key="GridCell.Tab.0.right" timestamp="1576601464633">
-      <screen x="1368" y="0" width="1920" height="1080" />
+    <state width="1634" height="292" key="GridCell.Tab.0.right" timestamp="1576765126566">
+      <screen x="1440" y="0" width="1920" height="1080" />
     </state>
+    <state width="1874" height="285" key="GridCell.Tab.0.right/0.312.1368.768/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576616510100" />
     <state width="1874" height="303" key="GridCell.Tab.0.right/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576535067050" />
     <state width="1874" height="354" key="GridCell.Tab.0.right/67.207.1533.873/1600.0.1920.1080@67.207.1533.873" timestamp="1576457706614" />
+    <state width="1874" height="303" key="GridCell.Tab.0.right/67.27.3453.1053@67.27.3453.1053" timestamp="1576705275897" />
+    <state width="1634" height="292" key="GridCell.Tab.0.right/67.297.1373.783/1440.0.1920.1080@1440.0.1920.1080" timestamp="1576765126566" />
     <state width="1874" height="285" key="GridCell.Tab.0.right/67.339.1301.741/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576601464633" />
-    <state width="1874" height="303" key="GridCell.Tab.1.bottom" timestamp="1576596892051">
-      <screen x="1368" y="0" width="1920" height="1080" />
+    <state width="1634" height="292" key="GridCell.Tab.1.bottom" timestamp="1576765126567">
+      <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="303" key="GridCell.Tab.1.bottom/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576535067050" />
     <state width="1874" height="354" key="GridCell.Tab.1.bottom/67.207.1533.873/1600.0.1920.1080@67.207.1533.873" timestamp="1576457706614" />
+    <state width="1874" height="303" key="GridCell.Tab.1.bottom/67.27.3453.1053@67.27.3453.1053" timestamp="1576705275898" />
+    <state width="1634" height="292" key="GridCell.Tab.1.bottom/67.297.1373.783/1440.0.1920.1080@1440.0.1920.1080" timestamp="1576765126567" />
     <state width="1874" height="303" key="GridCell.Tab.1.bottom/67.339.1301.741/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576596892051" />
-    <state width="1874" height="303" key="GridCell.Tab.1.center" timestamp="1576596892051">
-      <screen x="1368" y="0" width="1920" height="1080" />
+    <state width="1634" height="292" key="GridCell.Tab.1.center" timestamp="1576765126567">
+      <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="303" key="GridCell.Tab.1.center/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576535067050" />
     <state width="1874" height="354" key="GridCell.Tab.1.center/67.207.1533.873/1600.0.1920.1080@67.207.1533.873" timestamp="1576457706614" />
+    <state width="1874" height="303" key="GridCell.Tab.1.center/67.27.3453.1053@67.27.3453.1053" timestamp="1576705275898" />
+    <state width="1634" height="292" key="GridCell.Tab.1.center/67.297.1373.783/1440.0.1920.1080@1440.0.1920.1080" timestamp="1576765126567" />
     <state width="1874" height="303" key="GridCell.Tab.1.center/67.339.1301.741/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576596892051" />
-    <state width="1874" height="303" key="GridCell.Tab.1.left" timestamp="1576596892051">
-      <screen x="1368" y="0" width="1920" height="1080" />
+    <state width="1634" height="292" key="GridCell.Tab.1.left" timestamp="1576765126567">
+      <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="303" key="GridCell.Tab.1.left/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576535067050" />
     <state width="1874" height="354" key="GridCell.Tab.1.left/67.207.1533.873/1600.0.1920.1080@67.207.1533.873" timestamp="1576457706614" />
+    <state width="1874" height="303" key="GridCell.Tab.1.left/67.27.3453.1053@67.27.3453.1053" timestamp="1576705275897" />
+    <state width="1634" height="292" key="GridCell.Tab.1.left/67.297.1373.783/1440.0.1920.1080@1440.0.1920.1080" timestamp="1576765126567" />
     <state width="1874" height="303" key="GridCell.Tab.1.left/67.339.1301.741/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576596892051" />
-    <state width="1874" height="303" key="GridCell.Tab.1.right" timestamp="1576596892051">
-      <screen x="1368" y="0" width="1920" height="1080" />
+    <state width="1634" height="292" key="GridCell.Tab.1.right" timestamp="1576765126567">
+      <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="303" key="GridCell.Tab.1.right/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576535067050" />
     <state width="1874" height="354" key="GridCell.Tab.1.right/67.207.1533.873/1600.0.1920.1080@67.207.1533.873" timestamp="1576457706614" />
+    <state width="1874" height="303" key="GridCell.Tab.1.right/67.27.3453.1053@67.27.3453.1053" timestamp="1576705275898" />
+    <state width="1634" height="292" key="GridCell.Tab.1.right/67.297.1373.783/1440.0.1920.1080@1440.0.1920.1080" timestamp="1576765126567" />
     <state width="1874" height="303" key="GridCell.Tab.1.right/67.339.1301.741/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576596892051" />
     <state x="582" y="355" width="493" height="575" key="RollbackChangesDialog" timestamp="1576454943188">
       <screen x="67" y="207" width="1533" height="873" />
     </state>
     <state x="582" y="355" width="493" height="575" key="RollbackChangesDialog/67.207.1533.873/1600.0.1920.1080@67.207.1533.873" timestamp="1576454943188" />
-    <state x="2155" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1576534350507">
-      <screen x="1600" y="0" width="1920" height="1080" />
+    <state x="1923" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1576605264400">
+      <screen x="1368" y="0" width="1920" height="1080" />
     </state>
+    <state x="1923" y="275" key="Vcs.Push.Dialog.v2/0.312.1368.768/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576605264400" />
     <state x="2155" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576534350507" />
     <state x="510" y="429" key="Vcs.Push.Dialog.v2/67.207.1533.873/1600.0.1920.1080@67.207.1533.873" timestamp="1576457620198" />
-    <state x="667" y="377" width="367" height="530" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1576451039946">
-      <screen x="67" y="207" width="1533" height="873" />
+    <state x="1600" y="232" width="367" height="530" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1576703032629">
+      <screen x="67" y="27" width="3453" height="1053" />
     </state>
     <state x="667" y="377" width="367" height="530" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/67.207.1533.873/1600.0.1920.1080@67.207.1533.873" timestamp="1576451039946" />
-    <state x="1984" y="366" key="com.intellij.ide.util.TipDialog" timestamp="1576587358495">
-      <screen x="1368" y="0" width="1920" height="1080" />
+    <state x="1600" y="232" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/67.27.3453.1053@67.27.3453.1053" timestamp="1576703032629" />
+    <state x="1923" y="452" width="253" height="206" key="com.intellij.database.actions.ToolActions$ScriptingActionBase$1" timestamp="1576703018099">
+      <screen x="67" y="27" width="3453" height="1053" />
+    </state>
+    <state x="2400" y="436" width="309" height="206" key="com.intellij.database.actions.ToolActions$ScriptingActionBase$1/0.312.1368.768/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576616615392" />
+    <state x="1923" y="452" width="253" height="206" key="com.intellij.database.actions.ToolActions$ScriptingActionBase$1/67.27.3453.1053@67.27.3453.1053" timestamp="1576703018099" />
+    <state x="2472" y="436" width="225" height="206" key="com.intellij.database.actions.ToolActions$ScriptingActionBase$1/67.297.1373.783/1440.0.1920.1080@1440.0.1920.1080" timestamp="1576678257167" />
+    <state x="2056" y="366" key="com.intellij.ide.util.TipDialog" timestamp="1576717030846">
+      <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2216" y="366" key="com.intellij.ide.util.TipDialog/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576345128542" />
     <state x="559" y="503" key="com.intellij.ide.util.TipDialog/67.207.1533.873/1600.0.1920.1080@67.207.1533.873" timestamp="1576457731402" />
+    <state x="559" y="323" key="com.intellij.ide.util.TipDialog/67.27.1533.873@67.27.1533.873" timestamp="1576694017587" />
+    <state x="2056" y="366" key="com.intellij.ide.util.TipDialog/67.297.1373.783/1440.0.1920.1080@1440.0.1920.1080" timestamp="1576717030846" />
     <state x="1984" y="366" key="com.intellij.ide.util.TipDialog/67.339.1301.741/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576587358495" />
   </component>
 </project>

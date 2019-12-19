@@ -1,21 +1,64 @@
 {% extends 'meal_delivery/base.html' %}
 {% load static %}
 {% block content %}
-    {% if not meal %}
-        Invalid meal
-    {% else %}
-        <div class="col-12 col-md-10 view_meal">
-            <h2>{{ meal.name }}</h2>
+    <div class="col-12 col-md-10 view_meal">
+        {% if not meal %}
+            Invalid meal
+        {% else %}
             <div class="row meal">
-                <div class="col-12 col-md-5">
+                <div class="col-12 col-md-6 left_frame">
                     {% with 'meal_photos/'|add:meal.image as image_static %}
                         <img src="{% static image_static %}" alt="{{ meal.name }}">
                     {% endwith %}
                 </div>
-                <div class="col-12 col-md-7">
+                <div class="col-12 col-md-6">
+                    <h2>{{ meal.name }}</h2>
                     <p>{{ meal.description }}</p>
+                    {% if associated_meals %}
+                        <div class="row">
+                            <div class="col-12 associated_meals">
+                                <h5>Other Meals Available on the same Delivery:</h5>
+                                {% for meal in associated_meals %}
+                                    <a class="row meal" href="{% url 'md_view_meal_by_window' meal_id=meal.id window_id=window_id %}">
+                                        {% with 'meal_photos/'|add:meal.image as image_static %}
+                                            <img src="{% static image_static %}" alt="{{ meal.name }}">
+                                        {% endwith %}
+                                        <div class="col-12 name">{{ meal.name }}</div>
+                                    </a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endif %}
+                    {% if request.user.is_authenticated %}
+                        <div class="row ordering_bar" onselectstart="return false">
+                            <div class="col-12">
+                                <div class="num_selector">
+                                    <div id="num_selector_min" class="selector">-</div>
+                                    <div id="num_selector_num" class="number">0</div>
+                                    <div id="num_selector_add" class="selector">+</div>
+                                </div>
+                                <div id="add_to_order_btn" class="add_to_order_btn">
+                                    Add To Order
+                                </div>
+                                <form id="order_form" method="POST" action="{% url 'md_append_to_order' %}">
+                                    {% csrf_token %}
+                                    <input type="hidden" name="meal_id" value="{{ meal.id }}">
+                                    <input type="hidden" name="window_id" value="{{ window_id }}">
+                                    <input type="hidden" id="order_quantity" name="quantity"
+                                            {% if order %}
+                                                value="{{order.quantity}}"
+                                            {% else %}
+                                                value="0"
+                                           {% endif %}
+                                    >
+                                </form>
+                            </div>
+                        </div>
+                    {% endif %}
                 </div>
             </div>
-        </div>
-    {% endif %}
+        {% endif %}
+    </div>
 {% endblock %}
+
+{# https://www.tileclub.com/collections/project-kitchen-tile/products/diamond-hex-calacatta-gold-marble-mosaic-tile?variant=29048267210845 #}

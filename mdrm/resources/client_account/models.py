@@ -14,6 +14,6 @@ class Profile(MDRMModel):
     state = models.CharField(max_length=100)
     zip_code = models.CharField(max_length=25)
 
-    user = models.OneToOneField(User, related_name='profile', on_delete=models.CASCADE)
-    allergens = models.ManyToManyField(Allergen, related_name='profiles')
+    user = models.OneToOneField(User, related_name='profile', on_delete=models.CASCADE, blank=True)
+    allergens = models.ManyToManyField(Allergen, related_name='profiles', blank=True)
     object = ProfileManager()
