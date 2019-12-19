@@ -3,26 +3,26 @@
 
 {% block js %}
     <script>
-        remove_link = '/meal_delivery/remove_order/';
+        remove_link = "{% url 'md_remove_order' %}";
     </script>
-    <script src="{% static "js/my_orders.js" %}"> </script>
+    <script src="{% static "js/my_deliveries.js" %}"> </script>
 {% endblock %}
 
 {% block content %}
     <div class="col-12 col-md-10 my_orders">
-        {% if not orders %}
-            You have no pending orders
+        {% if not deliveries %}
+            You have no pending deliveries
         {% else %}
-            <h4>My Orders</h4>
-            {% for order in orders %}
+            <h4>My Deliveries -</h4>
+            {% for delivery in deliveries %}
                 <div class="row order">
                     <div class="col-12">
-                        <h5>{{ order.delivery_window.date|date:'l M, j Y' }}</h5>
+                        <h5>{{ delivery.delivery_window.date|date:'l M, j Y' }}</h5>
                     </div>
                     <div class="col-12 associated_meals">
                         <div class="row">
                             <div class="col-12">
-                                {% for order in order.orders %}
+                                {% for order in delivery.orders %}
                                     <div class="meal">
                                         <a href="{% url 'md_view_meal_by_window' meal_id=order.meal.id window_id=order.delivery_window.id %}">
                                             {% with 'meal_photos/'|add:order.meal.image as image_static %}

@@ -1,6 +1,6 @@
 import datetime
 
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 
 from mdrm.resources.client_account.resource import ClientAccountResource, Profile
 from mdrm.resources.delivery.resource import DeliveryWindow
@@ -12,13 +12,46 @@ from django.views import View
 from django.views.generic.edit import FormView
 from apps.meal_delivery.forms import ProfileForm
 from django.contrib import messages
-from django.contrib.auth import logout as auth_logout
+from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
+from apps.pearako.forms import RegistrationForm
 
 
 def logout(request):
     auth_logout(request)
     messages.success(request, 'You have been logged out')
     return redirect('md_index')
+
+
+def login(request):
+    if not request.POST:
+        return render(request, 'meal_delivery/login.html')
+
+    if request.POST['username'] and request.POST['password']:
+        user = authenticate(request, username=request.POST['username'], password=request.POST['password'])
+        if user:
+            auth_login(request, user)
+            return redirect(request.path_info)
+
+    messages.error(request, 'Invalid Credentials')
+    return redirect('md_login')
+
+
+def register(request):
+    if not request.POST:
+        return render(request, 'meal_delivery/register.html')
+
+    form = RegistrationForm(request.POST)
+    if not form.is_valid():
+        return render(request, 'meal_delivery/register.html', {'form': form})
+
+    form.save()
+    username = form.cleaned_data.get('username')
+    password = form.cleaned_data.get('password1')
+    user = authenticate(username=username, password=password)
+    auth_login(request, user)
+    messages.success(request, 'Thank you for registering')
+    return redirect('md_index')
+
 
 class IndexView(TemplateView):
     template_name = 'meal_delivery/index.html'
@@ -135,15 +168,14 @@ class AppendToOrder(View):
                                                  meal_id=request.POST['meal_id']
                                                  )
                     messages.success(request, 'Order Saved')
-                return redirect('md_my_orders')
         return redirect('md_index')
 
 
-class MyOrdersView(TemplateView):
-    template_name = 'meal_delivery/my_orders.html'
+class MyDeliveriesView(TemplateView):
+    template_name = 'meal_delivery/my_deliveries.html'
 
     def get_context_data(self, **kwargs):
-        context = super(MyOrdersView, self).get_context_data(**kwargs)
+        context = super(MyDeliveriesView, self).get_context_data(**kwargs)
         grouped_orders = {}
         for order in Order.objects.filter(user=self.request.user):
             if not order.delivery_window.date in grouped_orders:
@@ -152,17 +184,17 @@ class MyOrdersView(TemplateView):
                     'orders': []
                 }
             grouped_orders[order.delivery_window.date]['orders'].append(order)
-        orders = []
+        deliveries = []
         for order in grouped_orders.values():
-            orders.append(order)
-        context['orders'] = orders
+            deliveries.append(order)
+        context['deliveries'] = deliveries
         return context
 
 
 class RemoveOrder(View):
     def dispatch(self, request, *args, **kwargs):
-        if 'order_id' in kwargs:
-            orders = Order.objects.filter(id=kwargs['order_id'])
+        if 'pk' in kwargs:
+            orders = Order.objects.filter(id=kwargs['pk'])
             if orders:
                 orders[0].delete()
                 messages.success(request, 'Order has been removed')

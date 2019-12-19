@@ -54,6 +54,8 @@
                                 </form>
                             </div>
                         </div>
+                    {% else %}
+                        <a href="{% url 'md_login' %}?next={{ request.path }}">Login</a> or <a href="{% url 'md_register' %}">Register</a> to order!
                     {% endif %}
                 </div>
             </div>

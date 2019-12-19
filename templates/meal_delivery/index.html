@@ -5,21 +5,23 @@
         {% if upcoming_windows %}
             <h3>Upcoming Delivery Days:</h3>
             {% for window in upcoming_windows %}
-                <div class="row window">
-                    <div class="col-12 date">
-                        <h5>{{ window.window.date|date:'l M, j Y' }}</h5>
+                {% if window.associated_meals %}
+                    <div class="row window">
+                        <div class="col-12 date">
+                            <h5>{{ window.window.date|date:'l M, j Y' }}</h5>
+                        </div>
+                        <div class="col-12 associated_meals">
+                            {% for meal in window.associated_meals %}
+                                <a class="row meal" href="{% url 'md_view_meal_by_window' meal_id=meal.id window_id=window.window.id %}">
+                                    {% with 'meal_photos/'|add:meal.image as image_static %}
+                                        <img src="{% static image_static %}" alt="{{ meal.name }}">
+                                    {% endwith %}
+                                    <div class="col-12 name">{{ meal.name }}</div>
+                                </a>
+                            {% endfor %}
+                        </div>
                     </div>
-                    <div class="col-12 associated_meals">
-                        {% for meal in window.associated_meals %}
-                            <a class="row meal" href="{% url 'md_view_meal_by_window' meal_id=meal.id window_id=window.window.id %}">
-                                {% with 'meal_photos/'|add:meal.image as image_static %}
-                                    <img src="{% static image_static %}" alt="{{ meal.name }}">
-                                {% endwith %}
-                                <div class="col-12 name">{{ meal.name }}</div>
-                            </a>
-                        {% endfor %}
-                    </div>
-                </div>
+                {% endif %}
             {% endfor %}
         {% else %}
             <h3>There are no upcoming delivery windows</h3>
