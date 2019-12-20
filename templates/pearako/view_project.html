@@ -13,13 +13,16 @@
             <h5>The Challenges:</h5>
             {{ project.challenges }}
         {% endif %}
-        {% if project.challenges %}
+        {% if project.solution %}
             <h5>The Solution:</h5>
             {{ project.solution }}
         {% endif %}
         {% if project.has_demo %}
-            <h5><a href="{% url 'demo_project' project_slug=project.slug %}">Try It Out</a></h5>
-            {{ project.solution }}
+            {% if project.demo_link %}
+                <h5><a href="{{ project.demo_link }}" target="_blank">Try It Out</a></h5>
+            {% else %}
+                <h5><a href="{% url 'demo_project' project_slug=project.slug %}" target="_blank">Try It Out</a></h5>
+            {% endif %}
         {% endif %}
     </div>
 {% endblock %}
