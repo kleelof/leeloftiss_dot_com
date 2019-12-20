@@ -1,0 +1,35 @@
+{% extends 'meal_delivery/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="col-12 col-md-10">
+        {% if not deliveries %}
+            You have no pending deliveries
+        {% else %}
+            <h4>My Deliveries -</h4>
+            {% for delivery in deliveries %}
+                <div class="row order">
+                    <div class="col-12">
+                        <h5>{{ delivery.delivery_window.date|date:'l M, j Y' }}</h5>
+                    </div>
+                    <div class="col-12 associated_meals">
+                        <div class="row">
+                            <div class="col-12">
+                                {% for order in delivery.orders %}
+                                    <div class="meal">
+                                        <a href="">
+                                            {% with 'meal_photos/'|add:order.meal.image as image_static %}
+                                                <img src="{% static image_static %}" alt="{{ order.meal.name }}">
+                                            {% endwith %}
+                                        </a>
+                                        <div class="name">{{ order.meal.name }} - {{ order.quantity|floatformat:"0" }}</div>
+                                        <div id="del_{{ order.id }}" class="remove_btn">X</div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% endblock %}

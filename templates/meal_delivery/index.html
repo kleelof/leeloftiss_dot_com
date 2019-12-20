@@ -3,7 +3,15 @@
 {% block content %}
     <div class="col-12 col-md-10 upcoming_windows">
         {% if upcoming_windows %}
-            <h3>Upcoming Delivery Days:</h3>
+            <p>
+                <h5>Love Thai food? Wouldn't you LOVE to cook authentic Thai dishes?</h5><br>
+                <h6>Now you can learn to cook your favorite dishes and learn more about Thai culinary techniques with our pre-prepped meal kits.</h6>
+                Each kit comes with all the ingredients you need, prepped and ready to be cooked with the accompanying recipe.
+                <br>
+                Meal kits can be prepared in as little as 15 minutes.
+                <br>
+                We deliver every Tuesday and Friday. Please check out upcoming delivery days.
+            </p>
             {% for window in upcoming_windows %}
                 {% if window.associated_meals %}
                     <div class="row window">
@@ -11,14 +19,26 @@
                             <h5>{{ window.window.date|date:'l M, j Y' }}</h5>
                         </div>
                         <div class="col-12 associated_meals">
-                            {% for meal in window.associated_meals %}
-                                <a class="row meal" href="{% url 'md_view_meal_by_window' meal_id=meal.id window_id=window.window.id %}">
-                                    {% with 'meal_photos/'|add:meal.image as image_static %}
-                                        <img src="{% static image_static %}" alt="{{ meal.name }}">
-                                    {% endwith %}
-                                    <div class="col-12 name">{{ meal.name }}</div>
-                                </a>
-                            {% endfor %}
+                            <div class="row">
+                                {% for meal in window.associated_meals %}
+                                    <div class="col-sm-6 col-md-4 meal no_padding">
+                                        <div class="row inner">
+                                            <div class="col-12 name">{{ meal.name }}</div>
+                                            <div class="col-12 no_padding">
+                                                {% with 'meal_photos/'|add:meal.image as image_static %}
+                                                    <img src="{% static image_static %}" alt="{{ meal.name }}">
+                                                {% endwith %}
+                                            </div>
+                                            <div class="col-12">
+                                                {{ meal.description|truncatewords:50 }}
+                                                <a class="more_link" href="{% url 'md_view_meal_by_window' meal_id=meal.id window_id=window.window.id %}">more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                {% endfor %}
+                            </div>
+
                         </div>
                     </div>
                 {% endif %}

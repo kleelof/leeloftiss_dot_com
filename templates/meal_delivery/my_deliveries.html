@@ -9,35 +9,53 @@
 {% endblock %}
 
 {% block content %}
-    <div class="col-12 col-md-10 my_orders">
+    <div class="col-12 col-md-10 my_deliveries">
         {% if not deliveries %}
             You have no pending deliveries
         {% else %}
-            <h4>My Deliveries -</h4>
-            {% for delivery in deliveries %}
-                <div class="row order">
-                    <div class="col-12">
-                        <h5>{{ delivery.delivery_window.date|date:'l M, j Y' }}</h5>
-                    </div>
-                    <div class="col-12 associated_meals">
-                        <div class="row">
-                            <div class="col-12">
-                                {% for order in delivery.orders %}
-                                    <div class="meal">
-                                        <a href="{% url 'md_view_meal_by_window' meal_id=order.meal.id window_id=order.delivery_window.id %}">
-                                            {% with 'meal_photos/'|add:order.meal.image as image_static %}
-                                                <img src="{% static image_static %}" alt="{{ order.meal.name }}">
-                                            {% endwith %}
-                                        </a>
-                                        <div class="name">{{ order.meal.name }} - {{ order.quantity|floatformat:"0" }}</div>
-                                        <div id="del_{{ order.id }}" class="remove_btn">X</div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th colspan="2">Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th colspan="2">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for delivery in deliveries %}
+                        <tr>
+                            <td colspan="2">{{ delivery.delivery_window.date|date:'l M, j Y' }}</td>
+                        </tr>
+                        {% for order in delivery.orders %}
+                            <tr>
+                                <td>
+                                    {% with 'meal_photos/'|add:order.meal.image as image_static %}
+                                        <img src="{% static image_static %}" alt="{{ order.meal.name }}">
+                                    {% endwith %}
+                                </td>
+                                <td>{{ order.meal.name }}</td>
+                                <td id="unit_price_{{ order.meal.id }}">${{ order.meal.price|floatformat:2 }}</td>
+                                <td>
+                                    <div id="num_selector_{{ order.meal.id }}" class="num_selector" onselectstart="return false">
+                                        <div class="selector dec_selector">-</div>
+                                        <div class="number">{{ order.quantity|floatformat:"0" }}</div>
+                                        <div class="selector inc_selector">+</div>
                                     </div>
-                                {% endfor %}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
+                                </td>
+                                <td id="order_total_{{ order.meal.id }}" class="order_total">${{ order.total|floatformat:2 }}</td>
+                                <td><div id="del_{{ order.id }}" class="remove_btn">X</div></td>
+                            </tr>
+                        {% endfor %}
+                    {% endfor %}
+                    <tr>
+                        <td colspan="2"></td>
+                        <td><button type="button" class="btn btn-success">Checkout</button></td>
+                        <td>Subtotal:</td>
+                        <td id="sub_total">0</td>
+                    </tr>
+                </tbody>
+            </table>
         {% endif %}
     </div>
 {% endblock %}

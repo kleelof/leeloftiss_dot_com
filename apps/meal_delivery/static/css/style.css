@@ -2,6 +2,10 @@ img{
     width: 100%
 }
 
+.no_padding{
+    padding: 0 !important;
+}
+
 /* base.html */
 #header img{
     width: 100%
@@ -43,8 +47,8 @@ a:active {
 }
 
 /* upcoming_windows */
-.upcoming_windows{
-
+.upcoming_windows p{
+    font-size: 1.25em;
 }
 .upcoming_windows .window{
     text-align: left;
@@ -57,25 +61,47 @@ a:active {
 /* associated meal */
 .associated_meals{}
 .associated_meals .meal{
-    display: inline-block;
-    width: 250px;
-    border: 1px solid deepskyblue;
-    margin: 5px;
-    position: relative;
+    padding: 5px !important;
+    max-height: 400px;
+    margin-bottom: 20px !important;
 }
-.associated_meals .remove_btn{
+.associated_meals .meal .more_link a{
+    color: blue;
+}
+.associated_meals .meal .inner{
+    padding: 0;
+    margin: 0;
+    border: 1px solid darkgrey;
+    text-overflow: ellipsis;
+}
+
+.associated_meals .meal .name{
+    background-color: gray;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.associated_meals .meal a{
+    color: black;
+    text-decoration: none;
+}
+
+/* remove_btn */
+.remove_btn{
     display: inline-block;
     padding: 2px;
-    background-color: skyblue;
+    background-color: coral;
     font-weight: bold;
-    position: absolute;
-    top: 0;
-    right: 0;
     color: white;
     cursor: pointer;
 }
-.associated_meals .remove_btn:hover{
-    background-color: deepskyblue;
+.remove_btn:hover{
+    background-color: orangered;
+}
+
+/* my_deliveries */
+.my_deliveries img{
+    width: 125px;
 }
 
 /* ordering  bar */
@@ -132,6 +158,7 @@ a:active {
 }
 
 .delivery_window .meal{
+    display: inline-block;
     margin-bottom: 10px !important;
 }
 

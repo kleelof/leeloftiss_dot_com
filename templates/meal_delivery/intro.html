@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meal Delivery Intro</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <style>
+        .next{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .center_text{
+            text-align: center;
+        }
+        #dyk{
+            margin-top: 150px;
+        }
+        #hay{
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            {% if not page_number %}
+                <div id="dyk" class="col-12 center_text">
+                    <img src="{% static 'images/did_you_know.png' %}">
+                </div>
+                <a href="/meal_delivery/intro/1" class="next">Next Page</a>
+            {% elif page_number == '1' %}
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1>The home meal kit industry, which includes these well-known companies.......</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <img src="{% static 'images/blue_apron.png' %}">
+                        </div>
+                        <div class="col-3">
+                            <img src="{% static 'images/freshly.png' %}">
+                            </div>
+                        <div class="col-3">
+                            <img src="{% static 'images/hello_fresh.png' %}">
+                        </div>
+                        <div class="col-3">
+                            <img src="{% static 'images/home_chef.png' %}">
+                        </div>
+                        <div class="col-3">
+                            <img src="{% static 'images/sun_basket.png' %}">
+                        </div>
+                    </div>
+                </div>
+                <a href="/meal_delivery/intro/2" class="next">Next Page</a>
+            {% elif page_number == '2' %}
+                <div class="col-12 center_text">
+                    <h1 style="margin-top: 50px;">Is worth over $1.5 billion!</h1>
+                    <img src="{% static 'images/thistle.png' %}" style="margin-top: 50px;">
+                    <h3>In 2018, Thistle, a Bay Area meal kit delivery service, was <br><a href="https://www.bizjournals.com/sanfrancisco/news/2018/10/30/fast-100-thistle-food-delivery-vegan.html" target="_blank">the second fastest growing company in the Bay Area.</a></h3>
+                </div>
+                <a href="/meal_delivery/intro/4" class="next">Next Page</a>
+            {% elif page_number == '4' %}
+                <div class="col-12 center_text">
+                    <h1>Meals-to-go business</h1>
+                    <a href="https://howtostartanllc.com/business-ideas/meals-to-go" target="_blank">HOW TO START A MEALS TO GO BUSINESS</a><br>
+                    <a href="https://www.upcounsel.com/how-to-start-a-meal-prep-business" target="_blank">How to Start a Meal Prep Business</a><br>
+                    <a href="https://smallbusiness.chron.com/start-meals-business-2167.html" target="_blank">How to Start a Meals to Go Business</a><br>
+                    <a href="https://ivetriedthat.com/how-to-start-your-own-meals-to-go-business/" target="_blank">How to Start Your Own Meals-to-Go Business</a><br>
+                    <a href="http://mynextbusinessidea.com/how-to-start-a-healthy-meals-delivery-business/" target="_blank">HOW TO START A HEALTHY MEALS DELIVERY BUSINESS</a><br>
+                    <a href="https://www.entrepreneurshipinabox.com/17652/how-to-start-a-food-delivery-business-from-home/" target="_blank">HOW TO START A FOOD DELIVERY BUSINESS FROM HOME</a><br>
+                    <a href="https://cheftalk.com/threads/starting-meals-to-go-business.72521/" target="_blank">Starting Meals to Go Business</a><br>
+                    <a href="/meal_delivery/intro/5" class="next">Next Page</a>
+                </div>
+            {% elif page_number == '5' %}
+                <div id="hay" class="col-12 center_text">
+                    <img src="{% static 'images/how_about_you.png' %}">
+                </div>
+                <div class="col-12 center_text">
+                    <h1>Ready to make some great food and money?</h1>
+                </div>
+                <a href="/meal_delivery/intro/6" class="next">Next Page</a>
+            {% elif page_number == '6' %}
+                <div class="col-12">
+                    <p>
+                        The following is a proof of concept for a service that enables home chefs to build their own home meal kit delivery service.<br>
+                        <br>
+                        The home chef can easily schedule meals and delivery days.
+                        <br>
+                        <br>
+                        Clients can browse menu items and schedule deliveries of fun to make meal kits.
+                    </p>
+                </div>
+                <a href="/meal_delivery" class="next">Demo</a>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

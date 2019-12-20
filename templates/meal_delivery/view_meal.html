@@ -14,21 +14,6 @@
                 <div class="col-12 col-md-6">
                     <h2>{{ meal.name }}</h2>
                     <p>{{ meal.description }}</p>
-                    {% if associated_meals %}
-                        <div class="row">
-                            <div class="col-12 associated_meals">
-                                <h5>Other Meals Available on the same Delivery:</h5>
-                                {% for meal in associated_meals %}
-                                    <a class="row meal" href="{% url 'md_view_meal_by_window' meal_id=meal.id window_id=window_id %}">
-                                        {% with 'meal_photos/'|add:meal.image as image_static %}
-                                            <img src="{% static image_static %}" alt="{{ meal.name }}">
-                                        {% endwith %}
-                                        <div class="col-12 name">{{ meal.name }}</div>
-                                    </a>
-                                {% endfor %}
-                            </div>
-                        </div>
-                    {% endif %}
                     {% if request.user.is_authenticated %}
                         <div class="row ordering_bar" onselectstart="return false">
                             <div class="col-12">
@@ -56,6 +41,30 @@
                         </div>
                     {% else %}
                         <a href="{% url 'md_login' %}?next={{ request.path }}">Login</a> or <a href="{% url 'md_register' %}">Register</a> to order!
+                    {% endif %}
+                    {% if associated_meals %}
+                        <div class="row">
+                            <div class="col-12">
+                                <h5>Here are other dishes available the same day:</h5>
+                            </div>
+                            <div class="col-12 associated_meals">
+                                <div class="row">
+                                    {% for meal in associated_meals %}
+                                        <div class="col-sm-6 col-md-4 meal no_padding">
+                                            <div class="row inner">
+                                                <div class="col-12">
+                                                    <a class="row meal" href="{% url 'md_view_meal_by_window' meal_id=meal.id window_id=window_id %}">
+                                                        {% with 'meal_photos/'|add:meal.image as image_static %}
+                                                            <img src="{% static image_static %}" alt="{{ meal.name }}">
+                                                        {% endwith %}
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
                     {% endif %}
                 </div>
             </div>

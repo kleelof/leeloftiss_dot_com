@@ -53,6 +53,15 @@ def register(request):
     return redirect('md_index')
 
 
+class IntroView(TemplateView):
+    template_name = 'meal_delivery/intro.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(IntroView, self).get_context_data(**kwargs)
+        context['page_number'] = kwargs['page']
+        return context
+
+
 class IndexView(TemplateView):
     template_name = 'meal_delivery/index.html'
 
@@ -177,6 +186,40 @@ class MyDeliveriesView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(MyDeliveriesView, self).get_context_data(**kwargs)
         grouped_orders = {}
+        total=0
+        for order in Order.objects.filter(user=self.request.user):
+            if not order.delivery_window.date in grouped_orders:
+                grouped_orders[order.delivery_window.date] = {
+                    'delivery_window': order.delivery_window,
+                    'orders': []
+                }
+            order.total = order.quantity * order.meal.price
+            total += order.total
+            grouped_orders[order.delivery_window.date]['orders'].append(order)
+        deliveries = []
+        for order in grouped_orders.values():
+            deliveries.append(order)
+        context['deliveries'] = deliveries
+        context['total'] = total
+        return context
+
+
+class RemoveOrder(View):
+    def dispatch(self, request, *args, **kwargs):
+        if 'pk' in kwargs:
+            orders = Order.objects.filter(id=kwargs['pk'])
+            if orders:
+                orders[0].delete()
+                messages.success(request, 'Order has been removed')
+        return redirect(request.META.get('HTTP_REFERER', '/'))
+
+
+class CheckoutView(TemplateView):
+    template_name = 'meal_delivery/checkout.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(CheckoutView, self).get_context_data(**kwargs)
+        grouped_orders = {}
         for order in Order.objects.filter(user=self.request.user):
             if not order.delivery_window.date in grouped_orders:
                 grouped_orders[order.delivery_window.date] = {
@@ -189,13 +232,3 @@ class MyDeliveriesView(TemplateView):
             deliveries.append(order)
         context['deliveries'] = deliveries
         return context
-
-
-class RemoveOrder(View):
-    def dispatch(self, request, *args, **kwargs):
-        if 'pk' in kwargs:
-            orders = Order.objects.filter(id=kwargs['pk'])
-            if orders:
-                orders[0].delete()
-                messages.success(request, 'Order has been removed')
-        return redirect(request.META.get('HTTP_REFERER', '/'))

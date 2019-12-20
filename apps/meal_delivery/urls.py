@@ -1,7 +1,7 @@
 from django.urls import path, re_path
 from rest_framework import routers
 from apps.meal_delivery.views import ProfilePageView, IndexView, DeliveryWindowView, ViewMealView, AppendToOrder, \
-    logout, MyDeliveriesView, RemoveOrder, login, register
+    logout, MyDeliveriesView, RemoveOrder, login, register, CheckoutView, IntroView
 
 urlpatterns = [
     path('', IndexView.as_view(), name='md_index'),
@@ -15,4 +15,6 @@ urlpatterns = [
     path('register/', register, name='md_register'),
     path('my_deliveries/', MyDeliveriesView.as_view(), name='md_my_deliveries'),
     re_path('remove_order(?:/(?P<pk>[0-9]+))?/$', RemoveOrder.as_view(), name='md_remove_order'),
+    path('checkout/', CheckoutView.as_view(), name='md_checkout'),
+    re_path('intro(?:/(?P<page>[0-9]+))?/$', IntroView.as_view(), name='md_intro'),
 ]

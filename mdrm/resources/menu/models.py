@@ -9,6 +9,7 @@ class Meal(MDRMModel):
     description = models.TextField(blank=True)
     serve_start = models.DateField()
     serve_end = models.DateField()
+    price = models.FloatField(default=0)
 
     recipes = models.ManyToManyField('Recipe', related_name='meals', blank=True, null=True) #todo:// remove blank=True
 
