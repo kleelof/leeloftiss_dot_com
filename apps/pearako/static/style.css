@@ -1,6 +1,11 @@
+img{
+    width: 100%;
+}
+
 #header{
 
 }
+
 
 #server_messages .error{
     color: orangered;
@@ -26,4 +31,27 @@
 
 .projects_list .project h4{
     font-weight: bold;
+}
+
+/* view_project */
+.view_project h5{
+    font-weight: bold;
+}
+.view_project .images{
+    margin-top: 10px;
+}
+.view_project .images .image{
+    margin-top: 10px;
+}
+.view_project .images .holder{
+    height: 200px;
+    border: 1px solid darkgrey;
+}
+.view_project .images .caption{
+    font-size: 12px;
+    text-align: center;
+}
+
+.view_project .technologies img{
+    width: 50px;
 }

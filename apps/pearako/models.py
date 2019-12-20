@@ -9,6 +9,15 @@ class Technologies(models.Model):
         return f'{self.name}({self.slug}'
 
 
+class Image(models.Model):
+    name = models.CharField(max_length=256)
+    is_video = models.BooleanField(default=False)
+    caption = models.CharField(max_length=100, blank=True)
+
+    def __str__(self):
+        return self.name
+
+
 class Projects(models.Model):
     name = models.CharField(max_length=100)
     slug = models.CharField(max_length=100)
@@ -26,7 +35,11 @@ class Projects(models.Model):
     solution = models.TextField(blank=True)
     follow_up = models.TextField(blank=True)
 
-    technologies = models.ManyToManyField(Technologies, related_name='projects')
+    technologies = models.ManyToManyField(Technologies, related_name='project')
+    images = models.ManyToManyField(Image, related_name='project', blank=True)
 
     def __str__(self):
         return f'{self.name}({self.slug}'
+
+
+
