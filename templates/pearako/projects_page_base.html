@@ -25,9 +25,9 @@
                                     <h4>{{ project.name }}</h4>
                                     <p>
                                         {% if project.description %}
-                                            {{ project.description }}
+                                            {{ project.description | safe }}
                                         {% else %}
-                                            {{ project.the_ask }}
+                                            {{ project.the_ask | safe }}
                                         {% endif %}
                                     </p>
                                     <div>
@@ -39,9 +39,9 @@
                                     <h4>{{ project.name }}</h4>
                                      <p>
                                         {% if project.description %}
-                                            {{ project.description }}
+                                            {{ project.description | safe }}
                                         {% else %}
-                                            {{ project.the_ask }}
+                                            {{ project.the_ask | safe }}
                                         {% endif %}
                                     </p>
                                     <div>
