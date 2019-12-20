@@ -16,6 +16,7 @@ class Projects(models.Model):
     show_on_jewels = models.BooleanField(default=False)
     show_on_bootcamp = models.BooleanField(default=False)
     has_demo = models.BooleanField(default=False)
+    demo_link = models.CharField(max_length=256, blank=True, help_text='Leave blank for default demo path')
     github_link = models.CharField(max_length=256, blank=True)
     external_link = models.CharField(max_length=256, blank=True)
     image_name = models.CharField(max_length=256, blank=True)
