@@ -1,0 +1,107 @@
+img{
+    width: 100%;
+}
+
+#header{
+
+}
+
+/* base.html */
+#content{margin-top: 5px;}
+
+/* menu */
+.menu_technology{}
+.menu_technology img{
+    display: inline-block;
+    width: 30px;
+    margin-left: 3px;
+}
+.menu_technology a{
+    display: inline-block;
+}
+
+/* messages */
+#server_messages .error{
+    color: orangered;
+}
+
+#server_messages .success{
+    color: green;
+}
+
+/* projects page */
+.projects_page{}
+.projects_page .header img{
+    width: 150px;
+}
+.projects_page .header h2{
+    display: inline-block;
+}
+
+/* projects list */
+.projects_list .project{
+    margin-top: 10px;
+}
+.projects_list .project p{
+    font-size: 1.25em;
+}
+.projects_list .project img{
+    width: 100%;
+    padding: 3px;
+    border: 2px solid black;
+}
+.projects_list .project h4{
+    font-weight: bold;
+}
+.projects_list .name{
+    font-size: 1.25em;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* view_project */
+.view_project h5{
+    font-weight: bold;
+}
+.view_project .image_header .image{
+    border: 1px solid darkgrey;
+}
+.view_project .images{
+    margin-top: 10px;
+}
+.view_project .images img{
+    max-height: 200px;
+}
+.view_project .images .image{
+    margin-top: 10px;
+}
+.view_project .images .holder{
+    height: 200px;
+    border: 1px solid darkgrey;
+}
+.view_project .images .caption{
+    font-size: 12px;
+    text-align: center;
+}
+
+.view_project .technologies img{
+    width: 50px;
+}
+
+/* related projects */
+.related_projects{}
+.related_projects .project{
+    border: 1px solid darkgrey;
+    cursor: pointer;
+    margin: 3px;
+}
+.related_projects .project{
+    text-decoration: none;
+    color: black;
+}
+.related_projects .project:hover{
+    background-color: whitesmoke;
+}
+.related_projects .name{
+    text-align: center;
+}

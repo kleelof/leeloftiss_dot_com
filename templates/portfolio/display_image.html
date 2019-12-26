@@ -1,0 +1,10 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="col-12 col-md-10">
+        {% with 'project_images/'|add:image.name as image_static %}
+          <img src="{% static image_static %}" alt="{{ image.name }}">
+        {% endwith %}
+        <div><h3>{{ image.caption }}</h3></div>
+    </div>
+{% endblock %}

@@ -1,0 +1,118 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="col-12 col-md-10 view_project">
+        <div class="row">
+            <div class="col-12">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <div class="row d-sm-block d-md-none">
+                    <div class="col-12">
+                        <h1>{{ project.name }}</h1>
+                        <div class="row technologies">
+                            <div class="col-12">
+                                {% for technology in project.technologies.all %}
+                                    <a href="{% url 'view_by_technology' technology_id=technology.id %}">
+                                        {% with 'badges/'|add:technology.slug as image_static %}
+                                          <img src="{% static image_static %}.png" alt="{{ project.name }}" alt="{{ technology.name }}" data-toggle="tooltip"  title="{{ technology.name }}">
+                                        {% endwith %}
+                                    </a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+                <div class="row image_header">
+                    <div class="col-12 image">
+                        {% with 'project_images/'|add:project.image_name as image_static %}
+                          <img src="{% static image_static %}" alt="{{ project.name }}">
+                        {% endwith %}
+                    </div>
+                </div>
+
+                {% if project.images %}
+                    <div class="row images">
+                        {% for image in project.images.all %}
+                            <div class="col-6 image">
+                                <div class="holder">
+                                    {% with 'project_images/'|add:image.name as image_static %}
+                                      <img src="{% static image_static %}" alt="{{ project.name }}">
+                                    {% endwith %}
+                                </div>
+                                <div class="caption">{{ image.caption }}</div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="row d-none d-md-block">
+                    <div class="col-12">
+                        <h1>{{ project.name }}</h1>
+                        <div class="row technologies">
+                            <div class="col-12">
+                                {% for technology in project.technologies.all %}
+                                    <a href="{% url 'view_by_technology' technology_id=technology.id %}">
+                                        {% with 'badges/'|add:technology.slug as image_static %}
+                                          <img src="{% static image_static %}.png" alt="{{ project.name }}" alt="{{ technology.name }}" data-toggle="tooltip"  title="{{ technology.name }}">
+                                        {% endwith %}
+                                    </a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% if project.github_link %}
+                    <hr>
+                    View the code at <a href="{{ project.github_link }}" target="_blank">Github</a>
+                {% endif %}
+                {% if project.description %}
+                    <hr>
+                    {{ project.description | safe }}
+                {% endif %}
+                {% if project.the_ask %}
+                    <hr>
+                    {{ project.the_ask | safe }}
+                {% endif %}
+                {% if project.challenges %}
+                    <hr>
+                    {{ project.challenges | safe }}
+                {% endif %}
+                {% if project.solution %}
+                    <hr>
+                    {{ project.solution | safe }}
+                {% endif %}
+                {% if project.follow_up %}
+                    <hr>
+                    {{ project.follow_up | safe }}
+                {% endif %}
+                {% if project.has_demo %}
+                    {% if project.demo_link %}
+                        <h5><a href="{{ project.demo_link }}" target="_blank">Try It Out</a></h5>
+                    {% else %}
+                        <h5><a href="{% url 'demo_project' project_slug=project.slug %}" target="_blank">Try It Out</a></h5>
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+        {% if related_projects %}
+            <div class="row related_projects">
+                <div class="col-12">
+                    <h5><u>Similar Projects</u></h5>
+                </div>
+                {% for project in related_projects %}
+                    <a href="{% url 'view_project' project_id=project.id %}" class="col-5 col-md-3 project">
+                        <div class="name">{{ project.name }}</div>
+                        {% with 'project_images/'|add:project.image_name as image_static %}
+                          <img src="{% static image_static %}" alt="{{ project.name }}">
+                        {% endwith %}
+                    </a>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

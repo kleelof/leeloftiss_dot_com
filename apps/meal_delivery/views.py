@@ -13,7 +13,7 @@ from django.views.generic.edit import FormView
 from apps.meal_delivery.forms import ProfileForm
 from django.contrib import messages
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
-from apps.pearako.forms import RegistrationForm
+from apps.portfolio.forms import RegistrationForm
 
 
 def logout(request):
