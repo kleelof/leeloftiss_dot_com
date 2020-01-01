@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth import authenticate, login as auth_login, logout as auth_logout
 from .forms import RegistrationForm
 from .models import Project, Image, Page, Technology
+import random
 
 
 def index(request):
@@ -79,8 +80,12 @@ def view_image(request, image_id):
 
 def view_projects_page(request, page_id):
     page = Page.objects.filter(id=page_id).first()
+    projects = Project.objects.filter(page=page) if page else None
+    if projects:
+        projects = [project for project in projects]
+        random.shuffle(projects)
     return render(request, 'portfolio/projects_page_base.html', {
-        'projects': Project.objects.filter(page=page) if page else None,
+        'projects': projects,
         'page': page
     })
 
@@ -89,8 +94,12 @@ def view_by_technology(request, technology_id):
     technology = Technology.objects.filter(id=technology_id).first()
     if not technology:
         pass
+    projects = Project.objects.filter(technologies=technology)
+    if projects:
+        projects = [project for project in projects]
+        random.shuffle(projects)
     return render(request, 'portfolio/projects_page_base.html', {
         'technology': technology,
-        'projects': Project.objects.filter(technologies=technology)
+        'projects': projects
     } )
 

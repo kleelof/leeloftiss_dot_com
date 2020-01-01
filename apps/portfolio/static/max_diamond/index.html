@@ -1,17 +1,16 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Max Diamond Maze Master</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'max_diamond/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="{% static 'max_diamond/script/EventHandler.js' %}"></script>
-    <script src="{% static 'max_diamond/script/ScoreBoard.js' %}"></script>
-    <script src="{% static 'max_diamond/script/MovingThing.js' %}"></script>
-    <script src="{% static 'max_diamond/script/Monster.js' %}"></script>
-    <script src="{% static 'max_diamond/script/Hero.js' %}"></script>
-    <script src="{% static 'max_diamond/script/GameBoard.js' %}"></script>
+    <script src="script/EventHandler.js"></script>
+    <script src="script/ScoreBoard.js"></script>
+    <script src="script/MovingThing.js"></script>
+    <script src="script/Monster.js"></script>
+    <script src="script/Hero.js"></script>
+    <script src="script/GameBoard.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -20,14 +19,14 @@
             <div id="lives" class="score_board_panel"> </div>
         </div>
         <div id="game_board"></div>
-        <div id="max"> <img src="{% static 'max_diamond/images/max.png' %}"> </div>
+        <div id="max"> <img src="images/max.png"> </div>
         <div id="monsters">
-            <div id="monster_0" class="monster"><img src="{% static 'max_diamond/images/monster_0.png' %}"></div>
-            <div id="monster_1" class="monster"><img src="{% static 'max_diamond/images/monster_1.png' %}"></div>
-            <div id="monster_2" class="monster"><img src="{% static 'max_diamond/images/monster_2.png' %}"></div>
+            <div id="monster_0" class="monster"><img src="images/monster_0.png"></div>
+            <div id="monster_1" class="monster"><img src="images/monster_1.png"></div>
+            <div id="monster_2" class="monster"><img src="images/monster_2.png"></div>
         </div>
         <div id="start_splash_screen" class="splash_screen">
-            <img src="{% static 'max_diamond/images/max_diamond_logo.png' %}">
+            <img src="images/max_diamond_logo.png">
         </div>
         <div id="level_screen" class="splash_screen">
             <div class="inner">
@@ -47,6 +46,6 @@
             </div>
         </div>
     </div>
-    <script src="{% static 'max_diamond/script/script.js' %}"></script>
+    <script src="script/script.js"></script>
 </body>
 </html>
