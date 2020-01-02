@@ -1,0 +1,48 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="col-12 col-md-10 projects_page">
+        <div class="row header">
+            {% if page %}
+                <div class="col-12">
+                    {{ page.description | safe }}
+                    <hr>
+                </div>
+            {% elif technology %}
+                <div class="col-12 technology_header">
+                    {% with 'badges/'|add:technology.slug as image_static %}
+                      <img src="{% static image_static %}.png" alt="{{ project.name }}" alt="{{ technology.name }}" data-toggle="tooltip"  title="{{ technology.name }}">
+                    {% endwith %}
+                    <h2>Projects using {{ technology.name }}</h2>
+                    <hr>
+                </div>
+            {% endif %}
+        </div>
+        {% if projects %}
+            <div class="row projects_list">
+                {% for project in projects %}
+                    <div class="col-12 col-md-6 project">
+                        <div class="name">{{ project.name }}</div>
+                        {% with 'project_images/'|add:project.image_name as image_static %}
+                          <img src="{% static image_static %}" alt="{{ project.name }}">
+                        {% endwith %}
+                        <div class="description">
+                            <p>
+                                {% if project.description %}
+                                    {{ project.description | safe }}
+                                {% else %}
+                                    {{ project.the_ask | safe }}
+                                {% endif %}
+                            </p>
+                        </div>
+                        <div>
+                            <a href="{% url 'view_project' project_id=project.id %}">more...</a>
+                        </div>
+                        <hr>
+                    </div>
+                {% endfor %}
+
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

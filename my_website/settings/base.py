@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.pearako.apps.PearakoConfig',
+    'apps.portfolio.apps.PortfolioConfig',
     'apps.meal_delivery.apps.MealDeliveryConfig',
     'mdrm.apps.MdrmConfig',
 ]
