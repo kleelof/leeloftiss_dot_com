@@ -11,8 +11,7 @@ class ProfileForm(forms.ModelForm):
     state = forms.CharField(max_length=100)
     zip_code = forms.CharField(max_length=25)
 
-    CHOICES = tuple((o.pk, o.name) for o in Allergen.objects.all())
-    allergens = forms.MultipleChoiceField(choices=CHOICES, required=False)
+    allergens = forms.ModelMultipleChoiceField(queryset=Allergen.objects.all(), required=False)
 
     class Meta:
         model = Profile

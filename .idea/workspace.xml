@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="278afd88-c908-4f20-b775-6efa06c516eb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/portfolio/static/max_diamond/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/portfolio/static/max_diamond/images/logo.xcf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/portfolio/static/max_diamond/images/max_original.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/portfolio/static/max_diamond/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/portfolio/static/max_diamond/script/EventHandler.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/portfolio/static/max_diamond/script/GameBoard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/portfolio/static/max_diamond/script/Hero.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/portfolio/static/max_diamond/script/Monster.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/portfolio/static/max_diamond/script/MovingThing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/portfolio/static/max_diamond/script/ScoreBoard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/portfolio/static/max_diamond/script/script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/portfolio/static/max_diamond/images/max_diamond_logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/apps/portfolio/static/max_diamond/images/max_diamond_logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/portfolio/static/max_diamond/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/portfolio/static/max_diamond/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/apps/portfolio/static/max_diamond/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/portfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/portfolio/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/portfolio/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/portfolio/demo_projects/max_diamond.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/portfolio/demo_projects/max_diamond.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/meal_delivery/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/meal_delivery/forms.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +57,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="MERGE" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectId" id="1Uz2UjVO5IEMxJi15uzyWkbswsa" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -89,7 +73,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/meal_delivery" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/my_website-master" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
@@ -139,7 +123,17 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@1f52df8a" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -250,7 +244,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577397457998</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Updates for deployment">
+      <created>1577977477137</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1577977477137</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,14 +270,15 @@
     <MESSAGE value="Updated intro &#10;Updated My Deliveries&#10;can now adjust quantities before checkout" />
     <MESSAGE value="Updated portfolio&#10;now has additional images with captions&#10;changed layout&#10;added badges" />
     <MESSAGE value="Updated Portfolio:&#10;Can now add pages through admin &#10;Changed project pages layout&#10;Removed headers from the view_project text. More natural flow.&#10;Can now lists projects by technology.&#10;Clicking a technology button on the view_project page takes you to projects using that technology&#10;Added Similar Projects. Projects are currently pulled based on similar technologies.&#10;Title and technologies on view_project page now appear before the images on mobile." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Portfolio:&#10;Can now add pages through admin &#10;Changed project pages layout&#10;Removed headers from the view_project text. More natural flow.&#10;Can now lists projects by technology.&#10;Clicking a technology button on the view_project page takes you to projects using that technology&#10;Added Similar Projects. Projects are currently pulled based on similar technologies.&#10;Title and technologies on view_project page now appear before the images on mobile." />
+    <MESSAGE value="Updates for deployment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates for deployment" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2018" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576348866922">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="2018" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576348866922" />
-    <state x="1805" y="0" width="860" height="741" key="CommitChangelistDialog2" timestamp="1577921706258">
+    <state x="1805" y="0" width="1112" height="933" key="CommitChangelistDialog2" timestamp="1577977477088">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="1732" y="135" key="CommitChangelistDialog2/0.312.1368.768/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576605256138" />
@@ -284,17 +286,18 @@
     <state x="358" y="316" key="CommitChangelistDialog2/67.207.1533.873/1600.0.1920.1080@67.207.1533.873" timestamp="1576457608851" />
     <state x="314" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1301.741@67.27.1301.741" timestamp="1576871646490" />
     <state x="1805" y="0" key="CommitChangelistDialog2/67.27.1373.783/1440.0.1920.1080@1440.0.1920.1080" timestamp="1577397455828" />
-    <state x="1805" y="0" key="CommitChangelistDialog2/67.27.1373.873/1440.0.1920.1080@1440.0.1920.1080" timestamp="1577921706258" />
+    <state x="1805" y="0" width="1112" height="933" key="CommitChangelistDialog2/67.27.1373.873/1440.0.1920.1080@1440.0.1920.1080" timestamp="1577977477088" />
     <state x="1804" y="135" width="860" height="807" key="CommitChangelistDialog2/67.297.1373.783/1440.0.1920.1080@1440.0.1920.1080" timestamp="1576852591838" />
     <state x="2297" y="299" width="515" height="479" key="EnvironmentVariablesDialog" timestamp="1576348416983">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="2297" y="299" width="515" height="479" key="EnvironmentVariablesDialog/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576348416983" />
-    <state x="2343" y="297" width="424" height="484" key="FileChooserDialogImpl" timestamp="1576364842279">
-      <screen x="1600" y="0" width="1920" height="1080" />
+    <state x="2183" y="297" width="424" height="484" key="FileChooserDialogImpl" timestamp="1577978122552">
+      <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2343" y="297" width="424" height="484" key="FileChooserDialogImpl/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576364842279" />
-    <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1577634582107">
+    <state x="2183" y="297" key="FileChooserDialogImpl/67.27.1373.873/1440.0.1920.1080@1440.0.1920.1080" timestamp="1577978122552" />
+    <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1577985730050">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="285" key="GridCell.Tab.0.bottom/0.312.1368.768/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576616510100" />
@@ -303,12 +306,13 @@
     <state width="1255" height="168" key="GridCell.Tab.0.bottom/67.27.1301.741@67.27.1301.741" timestamp="1576871583046" />
     <state width="1874" height="275" key="GridCell.Tab.0.bottom/67.27.1373.783/1440.0.1920.1080@1440.0.1920.1080" timestamp="1577634582107" />
     <state width="1327" height="199" key="GridCell.Tab.0.bottom/67.27.1373.783/1440.0.1920.1080@67.27.1373.783" timestamp="1577633454516" />
+    <state width="1874" height="275" key="GridCell.Tab.0.bottom/67.27.1373.873/1440.0.1920.1080@1440.0.1920.1080" timestamp="1577985730050" />
     <state width="1255" height="168" key="GridCell.Tab.0.bottom/67.27.3221.1053@67.27.3221.1053" timestamp="1577104129019" />
     <state width="1874" height="303" key="GridCell.Tab.0.bottom/67.27.3453.1053@67.27.3453.1053" timestamp="1576705275897" />
     <state width="1634" height="265" key="GridCell.Tab.0.bottom/67.297.1373.783/1440.0.1680.1050@1440.0.1680.1050" timestamp="1577462897609" />
     <state width="1874" height="276" key="GridCell.Tab.0.bottom/67.297.1373.783/1440.0.1920.1080@1440.0.1920.1080" timestamp="1576854424144" />
     <state width="1874" height="285" key="GridCell.Tab.0.bottom/67.339.1301.741/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576601464633" />
-    <state width="1874" height="275" key="GridCell.Tab.0.center" timestamp="1577634582107">
+    <state width="1874" height="275" key="GridCell.Tab.0.center" timestamp="1577985730050">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="285" key="GridCell.Tab.0.center/0.312.1368.768/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576616510100" />
@@ -317,12 +321,13 @@
     <state width="1255" height="168" key="GridCell.Tab.0.center/67.27.1301.741@67.27.1301.741" timestamp="1576871583045" />
     <state width="1874" height="275" key="GridCell.Tab.0.center/67.27.1373.783/1440.0.1920.1080@1440.0.1920.1080" timestamp="1577634582107" />
     <state width="1327" height="199" key="GridCell.Tab.0.center/67.27.1373.783/1440.0.1920.1080@67.27.1373.783" timestamp="1577633454516" />
+    <state width="1874" height="275" key="GridCell.Tab.0.center/67.27.1373.873/1440.0.1920.1080@1440.0.1920.1080" timestamp="1577985730050" />
     <state width="1255" height="168" key="GridCell.Tab.0.center/67.27.3221.1053@67.27.3221.1053" timestamp="1577104129019" />
     <state width="1874" height="303" key="GridCell.Tab.0.center/67.27.3453.1053@67.27.3453.1053" timestamp="1576705275897" />
     <state width="1634" height="265" key="GridCell.Tab.0.center/67.297.1373.783/1440.0.1680.1050@1440.0.1680.1050" timestamp="1577462897609" />
     <state width="1874" height="276" key="GridCell.Tab.0.center/67.297.1373.783/1440.0.1920.1080@1440.0.1920.1080" timestamp="1576854424144" />
     <state width="1874" height="285" key="GridCell.Tab.0.center/67.339.1301.741/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576601464633" />
-    <state width="1874" height="275" key="GridCell.Tab.0.left" timestamp="1577634582107">
+    <state width="1874" height="275" key="GridCell.Tab.0.left" timestamp="1577985730049">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="285" key="GridCell.Tab.0.left/0.312.1368.768/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576616510100" />
@@ -331,12 +336,13 @@
     <state width="1255" height="168" key="GridCell.Tab.0.left/67.27.1301.741@67.27.1301.741" timestamp="1576871583045" />
     <state width="1874" height="275" key="GridCell.Tab.0.left/67.27.1373.783/1440.0.1920.1080@1440.0.1920.1080" timestamp="1577634582107" />
     <state width="1327" height="199" key="GridCell.Tab.0.left/67.27.1373.783/1440.0.1920.1080@67.27.1373.783" timestamp="1577633454516" />
+    <state width="1874" height="275" key="GridCell.Tab.0.left/67.27.1373.873/1440.0.1920.1080@1440.0.1920.1080" timestamp="1577985730049" />
     <state width="1255" height="168" key="GridCell.Tab.0.left/67.27.3221.1053@67.27.3221.1053" timestamp="1577104129019" />
     <state width="1874" height="303" key="GridCell.Tab.0.left/67.27.3453.1053@67.27.3453.1053" timestamp="1576705275897" />
     <state width="1634" height="265" key="GridCell.Tab.0.left/67.297.1373.783/1440.0.1680.1050@1440.0.1680.1050" timestamp="1577462897608" />
     <state width="1874" height="276" key="GridCell.Tab.0.left/67.297.1373.783/1440.0.1920.1080@1440.0.1920.1080" timestamp="1576854424144" />
     <state width="1874" height="285" key="GridCell.Tab.0.left/67.339.1301.741/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576601464633" />
-    <state width="1874" height="275" key="GridCell.Tab.0.right" timestamp="1577634582107">
+    <state width="1874" height="275" key="GridCell.Tab.0.right" timestamp="1577985730050">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state width="1874" height="285" key="GridCell.Tab.0.right/0.312.1368.768/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576616510100" />
@@ -345,6 +351,7 @@
     <state width="1255" height="168" key="GridCell.Tab.0.right/67.27.1301.741@67.27.1301.741" timestamp="1576871583046" />
     <state width="1874" height="275" key="GridCell.Tab.0.right/67.27.1373.783/1440.0.1920.1080@1440.0.1920.1080" timestamp="1577634582107" />
     <state width="1327" height="199" key="GridCell.Tab.0.right/67.27.1373.783/1440.0.1920.1080@67.27.1373.783" timestamp="1577633454516" />
+    <state width="1874" height="275" key="GridCell.Tab.0.right/67.27.1373.873/1440.0.1920.1080@1440.0.1920.1080" timestamp="1577985730050" />
     <state width="1255" height="168" key="GridCell.Tab.0.right/67.27.3221.1053@67.27.3221.1053" timestamp="1577104129019" />
     <state width="1874" height="303" key="GridCell.Tab.0.right/67.27.3453.1053@67.27.3453.1053" timestamp="1576705275897" />
     <state width="1634" height="265" key="GridCell.Tab.0.right/67.297.1373.783/1440.0.1680.1050@1440.0.1680.1050" timestamp="1577462897609" />
@@ -398,13 +405,14 @@
       <screen x="67" y="207" width="1533" height="873" />
     </state>
     <state x="582" y="355" width="493" height="575" key="RollbackChangesDialog/67.207.1533.873/1600.0.1920.1080@67.207.1533.873" timestamp="1576454943188" />
-    <state x="443" y="216" width="572" height="363" key="Vcs.Push.Dialog.v2" timestamp="1576871665349">
-      <screen x="67" y="27" width="1301" height="741" />
+    <state x="1995" y="275" width="572" height="363" key="Vcs.Push.Dialog.v2" timestamp="1577977493245">
+      <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="1923" y="275" key="Vcs.Push.Dialog.v2/0.312.1368.768/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576605264400" />
     <state x="2155" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576534350507" />
     <state x="510" y="429" key="Vcs.Push.Dialog.v2/67.207.1533.873/1600.0.1920.1080@67.207.1533.873" timestamp="1576457620198" />
     <state x="443" y="216" width="572" height="363" key="Vcs.Push.Dialog.v2/67.27.1301.741@67.27.1301.741" timestamp="1576871665349" />
+    <state x="1995" y="275" key="Vcs.Push.Dialog.v2/67.27.1373.873/1440.0.1920.1080@1440.0.1920.1080" timestamp="1577977493245" />
     <state x="1995" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2/67.297.1373.783/1440.0.1920.1080@1440.0.1920.1080" timestamp="1576852601016" />
     <state x="2292" y="210" width="367" height="544" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1577312659607">
       <screen x="1440" y="0" width="1920" height="1080" />
