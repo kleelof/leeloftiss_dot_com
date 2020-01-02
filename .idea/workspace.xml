@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="278afd88-c908-4f20-b775-6efa06c516eb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/apps/portfolio/fixtures/initial_data.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/meal_delivery/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/meal_delivery/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/portfolio/static/project_images/clothing_personalizer_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/apps/portfolio/static/project_images/clothing_personalizer_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/portfolio/static/project_images/clothing_personalizer_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/apps/portfolio/static/project_images/clothing_personalizer_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/portfolio/static/project_images/clothing_personalizer_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/apps/portfolio/static/project_images/clothing_personalizer_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/portfolio/static/project_images/clothing_personalizer_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/apps/portfolio/static/project_images/clothing_personalizer_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/portfolio/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/apps/portfolio/static/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +78,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/my_website-master" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../thistle/resource_manager/notes/notes" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
@@ -123,17 +128,7 @@
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:db" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@1f52df8a" type="9fbbdea:ServiceModel$ServiceNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -251,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577977477137</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Updates for deployment">
+      <created>1577985745304</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1577985745304</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,7 +280,7 @@
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="2018" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576348866922" />
-    <state x="1805" y="0" width="1112" height="933" key="CommitChangelistDialog2" timestamp="1577977477088">
+    <state x="1805" y="0" width="1112" height="933" key="CommitChangelistDialog2" timestamp="1577985745242">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="1732" y="135" key="CommitChangelistDialog2/0.312.1368.768/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576605256138" />
@@ -286,17 +288,17 @@
     <state x="358" y="316" key="CommitChangelistDialog2/67.207.1533.873/1600.0.1920.1080@67.207.1533.873" timestamp="1576457608851" />
     <state x="314" y="27" width="860" height="741" key="CommitChangelistDialog2/67.27.1301.741@67.27.1301.741" timestamp="1576871646490" />
     <state x="1805" y="0" key="CommitChangelistDialog2/67.27.1373.783/1440.0.1920.1080@1440.0.1920.1080" timestamp="1577397455828" />
-    <state x="1805" y="0" width="1112" height="933" key="CommitChangelistDialog2/67.27.1373.873/1440.0.1920.1080@1440.0.1920.1080" timestamp="1577977477088" />
+    <state x="1805" y="0" width="1112" height="933" key="CommitChangelistDialog2/67.27.1373.873/1440.0.1920.1080@1440.0.1920.1080" timestamp="1577985745242" />
     <state x="1804" y="135" width="860" height="807" key="CommitChangelistDialog2/67.297.1373.783/1440.0.1920.1080@1440.0.1920.1080" timestamp="1576852591838" />
     <state x="2297" y="299" width="515" height="479" key="EnvironmentVariablesDialog" timestamp="1576348416983">
       <screen x="1600" y="0" width="1920" height="1080" />
     </state>
     <state x="2297" y="299" width="515" height="479" key="EnvironmentVariablesDialog/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576348416983" />
-    <state x="2183" y="297" width="424" height="484" key="FileChooserDialogImpl" timestamp="1577978122552">
+    <state x="2183" y="297" width="424" height="484" key="FileChooserDialogImpl" timestamp="1577992597777">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2343" y="297" width="424" height="484" key="FileChooserDialogImpl/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576364842279" />
-    <state x="2183" y="297" key="FileChooserDialogImpl/67.27.1373.873/1440.0.1920.1080@1440.0.1920.1080" timestamp="1577978122552" />
+    <state x="2183" y="297" width="424" height="484" key="FileChooserDialogImpl/67.27.1373.873/1440.0.1920.1080@1440.0.1920.1080" timestamp="1577992597777" />
     <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1577985730050">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
@@ -405,14 +407,14 @@
       <screen x="67" y="207" width="1533" height="873" />
     </state>
     <state x="582" y="355" width="493" height="575" key="RollbackChangesDialog/67.207.1533.873/1600.0.1920.1080@67.207.1533.873" timestamp="1576454943188" />
-    <state x="1995" y="275" width="572" height="363" key="Vcs.Push.Dialog.v2" timestamp="1577977493245">
+    <state x="1995" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1577985757086">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="1923" y="275" key="Vcs.Push.Dialog.v2/0.312.1368.768/1368.0.1920.1080@1368.0.1920.1080" timestamp="1576605264400" />
     <state x="2155" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2/67.207.1533.873/1600.0.1920.1080@1600.0.1920.1080" timestamp="1576534350507" />
     <state x="510" y="429" key="Vcs.Push.Dialog.v2/67.207.1533.873/1600.0.1920.1080@67.207.1533.873" timestamp="1576457620198" />
     <state x="443" y="216" width="572" height="363" key="Vcs.Push.Dialog.v2/67.27.1301.741@67.27.1301.741" timestamp="1576871665349" />
-    <state x="1995" y="275" key="Vcs.Push.Dialog.v2/67.27.1373.873/1440.0.1920.1080@1440.0.1920.1080" timestamp="1577977493245" />
+    <state x="1995" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.1373.873/1440.0.1920.1080@1440.0.1920.1080" timestamp="1577985757086" />
     <state x="1995" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2/67.297.1373.783/1440.0.1920.1080@1440.0.1920.1080" timestamp="1576852601016" />
     <state x="2292" y="210" width="367" height="544" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1577312659607">
       <screen x="1440" y="0" width="1920" height="1080" />

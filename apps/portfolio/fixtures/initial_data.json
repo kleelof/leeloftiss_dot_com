@@ -1,0 +1,249 @@
+[
+{
+  "model": "portfolio.technology",
+  "pk": 1,
+  "fields": {
+    "name": "C#",
+    "slug": "c_sharp"
+  }
+},
+{
+  "model": "portfolio.technology",
+  "pk": 2,
+  "fields": {
+    "name": "Flash",
+    "slug": "flash"
+  }
+},
+{
+  "model": "portfolio.technology",
+  "pk": 3,
+  "fields": {
+    "name": "Python",
+    "slug": "python"
+  }
+},
+{
+  "model": "portfolio.technology",
+  "pk": 4,
+  "fields": {
+    "name": "PHP",
+    "slug": "php"
+  }
+},
+{
+  "model": "portfolio.technology",
+  "pk": 5,
+  "fields": {
+    "name": "SQL",
+    "slug": "sql"
+  }
+},
+{
+  "model": "portfolio.technology",
+  "pk": 6,
+  "fields": {
+    "name": "Jquery",
+    "slug": "jquery"
+  }
+},
+{
+  "model": "portfolio.technology",
+  "pk": 7,
+  "fields": {
+    "name": "Javascript",
+    "slug": "javascript"
+  }
+},
+{
+  "model": "portfolio.technology",
+  "pk": 8,
+  "fields": {
+    "name": "RED5",
+    "slug": "red5"
+  }
+},
+{
+  "model": "portfolio.image",
+  "pk": 1,
+  "fields": {
+    "name": "stockmarket_heater_2.jpg",
+    "is_video": false,
+    "caption": ""
+  }
+},
+{
+  "model": "portfolio.image",
+  "pk": 2,
+  "fields": {
+    "name": "stockmarket_heater_3.png",
+    "is_video": false,
+    "caption": ""
+  }
+},
+{
+  "model": "portfolio.image",
+  "pk": 3,
+  "fields": {
+    "name": "boot_designer_1.png",
+    "is_video": false,
+    "caption": "Previously, customers used this form"
+  }
+},
+{
+  "model": "portfolio.image",
+  "pk": 4,
+  "fields": {
+    "name": "boot_designer_2.png",
+    "is_video": false,
+    "caption": "From design to skates in 2 weeks"
+  }
+},
+{
+  "model": "portfolio.image",
+  "pk": 5,
+  "fields": {
+    "name": "boot_designer_3.jpg",
+    "is_video": false,
+    "caption": ""
+  }
+},
+{
+  "model": "portfolio.image",
+  "pk": 6,
+  "fields": {
+    "name": "boot_designer_4.png",
+    "is_video": false,
+    "caption": "Easily select colors and materials"
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 1,
+  "fields": {
+    "name": "Stockmarket Heater",
+    "slug": "stockmarket_heater",
+    "has_demo": false,
+    "demo_link": "",
+    "github_link": "",
+    "external_link": "",
+    "image_name": "stockmarket_heater.png",
+    "description": "<p>\r\nStockmarket Heater is an online platform for training day traders in a live environment.\r\n</p>",
+    "the_ask": "<p>\r\nThe client, a day trader coach, wanted a platform for his students that was easy to use, could present his proposed heat map and would work regardless of operation system.\r\n</p>\r\n<p>\r\nThe primary feature he asked for was the ability to send out live buy/sell signals to his students.\r\n</p>",
+    "challenges": "<p>\r\nThe most challenging part of this project was the amount of live data that needed to be consumed and distributed to all the connected clients. Thousands of stock price updates per second that needed to be sorted based on which stocks each student wants to watch, then sent out to that student.\r\n</p>",
+    "solution": "<b>Backend:</b>\r\n<p>The client already had an ASP powered website. So I used C# to build a socket server capable of ingesting thousands of stock prices per second and distribute those updates to hundreds of connected students.</p>\r\n<p>As well as processing incoming data, the server handled the live chat system and sending out buy/sell signal suggestions from the instructor to his students.</p>\r\n<b>Frontend:</b>\r\n<p>We decided to use Flash for the frontend. Flash enabled us to implement his beautiful, interactive design to create an application that would work on any major browser and OS</p>",
+    "follow_up": "<p>Shortly after finishing this project, the client contacted me to add audio broadcasting functionality to the platform.<p>\r\n\r\n<p>I chose Red5 streaming server. To add functionality that would enable my client to verbally coach his clients during live sessions.</p>",
+    "technologies": [
+      1,
+      2,
+      8
+    ],
+    "images": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 2,
+  "fields": {
+    "name": "Algorithm Scratchpad",
+    "slug": "algorithm_scratchpad",
+    "has_demo": false,
+    "demo_link": "",
+    "github_link": "https://github.com/kleelof/AlgorithmScratchpad",
+    "external_link": "",
+    "image_name": "algorithm_scratchpad.png",
+    "description": "<p>\r\nAlgorithm Scratchpad is a personal project I built to test and compare algorithms.\r\n</p>",
+    "the_ask": "<p>\r\nI really enjoyed the algorithms from class and online. However,  I would often see 2 different approaches and would wonder which one was more efficient.\r\n</p>\r\n<p>\r\nI was also studying Python and interested in decorators. So I began building a decorator that can be attached to an algorithm and provide information about it's time complexity.\r\n</p>",
+    "challenges": "<p>\r\nIn order to determine performance, I decided the best approach would be to run the algorithm twice. Once with 'control' data then once with 'test' data that would be twice the amount used in the control run.\r\n</p>\r\n<p>\r\nThis would mean finding a way to easily generate data in large quantities.\r\n</p>\r\n<p>\r\nTo solve this, I created a data generator that consumes an object describing the type and quantity of  data needed to test the algorithm\r\n</p>",
+    "solution": "<p>\r\nThe project that was meant for learning about decorators and algorithms morphed into this utility with the following features:\r\n</p>\r\n<ul>\r\n<li>Provides a decorator that can test simple individual algorithms.</li>\r\n<li>Auto generates test data. Allows you to test algorithms with large data sets.</li>\r\n<li>Generates a report with run times and time complexity.</li>\r\n<li>Multiple algorithms can be tested at the same time generating a comparison report.</li>\r\n<li>You can build scratchpads for testing functions that exist within a data structure</li>\r\n<li>Comes with prebuilt scratchpads for binary tree, single linked list and more.</li>\r\n<li>Comes with a library of common algorithms such as staircase and common sorting algorithms</li>\r\n</ul>",
+    "follow_up": "",
+    "technologies": [
+      3
+    ],
+    "images": []
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 3,
+  "fields": {
+    "name": "Antik Skateboot Designer",
+    "slug": "antik_skateboot",
+    "has_demo": false,
+    "demo_link": "",
+    "github_link": "",
+    "external_link": "",
+    "image_name": "boot_designer.jpg",
+    "description": "<p>Antik Bootmaker  enables my clients customers to easily design a custom skateboot online.</p>",
+    "the_ask": "<p>The client wants to replace a paper form for ordering custom designed boots with an online designer that will give his customers a preview of the boot they've designed.</p>",
+    "challenges": "<p>The main challenge was getting all the  options in an easy to to access format.<p>\r\n<p>The clients original concept had multiple pages. I was not excited about this concept because the boots can be designed separately. With the concept he suggested, there was no side-by-side comparison to ensure they look good together.</p>",
+    "solution": "<p>The solution was a single page design that comfortably fit and allowed both boots to be visible the entire time.</p>\r\n<ul>\r\n  <li>User can select colors for 5 different parts of the boot</li>\r\n  <li>User can select fabric types for 2 parts of the boot</li>\r\n  <li>User can design each boot independently</li>\r\n  <li>Has a Randomize feature that randomizes all the colors and materials on both boots</li>\r\n  <li>User can compare designs side-by-side. Then easily apply the chosen design to both boots</li>\r\n  <li>When finished, an order form is generated and emailed to the shop to be ordered</li>\r\n</ul>",
+    "follow_up": "",
+    "technologies": [
+      2,
+      4,
+      5
+    ],
+    "images": [
+      3,
+      4,
+      5,
+      6
+    ]
+  }
+},
+{
+  "model": "portfolio.project",
+  "pk": 4,
+  "fields": {
+    "name": "Max Diamond",
+    "slug": "max_diamond",
+    "has_demo": true,
+    "demo_link": "",
+    "github_link": "https://github.com/kleelof/max_diamond",
+    "external_link": "",
+    "image_name": "max_diamond.png",
+    "description": "<p>\r\n  A PacMan style game where the hero, Max Diamond, has to clear the pyramid halls of diamonds without being killed by mummies.\r\n</p>",
+    "the_ask": "",
+    "challenges": "",
+    "solution": "",
+    "follow_up": "",
+    "technologies": [
+      6,
+      7
+    ],
+    "images": []
+  }
+},
+{
+  "model": "portfolio.page",
+  "pk": 1,
+  "fields": {
+    "name": "Home",
+    "is_home": true,
+    "description": "<p>\r\n  Welcome to my portfolio.\r\n</p>\r\n<p> \r\nThis portfolio represents a small percentage of all the projects I've worked on for clients both big and small from around the world.\r\n</p>",
+    "projects": [
+      1,
+      2,
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "portfolio.page",
+  "pk": 2,
+  "fields": {
+    "name": "Bootcamp",
+    "is_home": false,
+    "description": "<p>In November, 2019, I decided to attend a developer  bootcamp to update my skill set.</p>\r\n<p>Below are projects I did for the program or did on my own.</p>",
+    "projects": [
+      2,
+      4
+    ]
+  }
+}
+]
