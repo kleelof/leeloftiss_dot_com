@@ -1,4 +1,5 @@
 from .base import *
 
 DEBUG = False
-ALLOWED_HOSTS = ['your_production_domain_or_public_ip'] # or ['*']
+ALLOWED_HOSTS = ['3.14.79.237'] # or ['*']
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
