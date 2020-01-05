@@ -76,14 +76,14 @@ img{
     margin-top: 10px;
 }
 .view_project .images img{
-    max-height: 200px;
 }
 .view_project .images .image{
+    width: 100%;
     margin-top: 10px;
 }
 .view_project .images .holder{
-    height: 200px;
-    border: 1px solid darkgrey;
+    display: inline-block;
+     border: 1px solid darkgrey;
 }
 .view_project .images .caption{
     font-size: 12px;
