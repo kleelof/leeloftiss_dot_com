@@ -1,15 +1,15 @@
 {% extends 'portfolio/base.html' %}
 {% load static %}
 {% block content %}
-    <div class="col-12 col-md-10 view_project">
+    <div class="col-12 col-lg-10 view_project">
         <div class="row">
             <div class="col-12">
 
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-md-6">
-                <div class="row d-sm-block d-md-none">
+            <div class="col-12 col-lg-6">
+                <div class="row d-sm-block d-lg-none">
                     <div class="col-12">
                         <h1>{{ project.name }}</h1>
                         <div class="row technologies">
@@ -39,9 +39,15 @@
                         {% for image in project.images.all %}
                             <div class="col-6 image">
                                 <div class="holder">
-                                    {% with 'project_images/'|add:image.name as image_static %}
-                                      <img src="{% static image_static %}" alt="{{ project.name }}">
-                                    {% endwith %}
+                                    {% if 'MOV' in image.name %}
+                                        {% with 'project_images/'|add:image.name as image_static %}
+                                            <video controls="controls" width="100%" name="Video Name" src="{% static image_static %}"></video>
+                                        {% endwith %}
+                                    {% else %}
+                                        {% with 'project_images/'|add:image.name as image_static %}
+                                          <img src="{% static image_static %}" alt="{{ project.name }}">
+                                        {% endwith %}
+                                    {% endif %}
                                 </div>
                                 <div class="caption">{{ image.caption }}</div>
                             </div>
@@ -49,8 +55,8 @@
                     </div>
                 {% endif %}
             </div>
-            <div class="col-12 col-md-6">
-                <div class="row d-none d-md-block">
+            <div class="col-12 col-lg-6">
+                <div class="row d-none d-lg-block">
                     <div class="col-12">
                         <h1>{{ project.name }}</h1>
                         <div class="row technologies">
@@ -105,7 +111,7 @@
                     <h5><u>Similar Projects</u></h5>
                 </div>
                 {% for project in related_projects %}
-                    <a href="{% url 'view_project' project_id=project.id %}" class="col-5 col-md-3 project">
+                    <a href="{% url 'view_project' project_id=project.id %}" class="col-5 col-lg-3 project">
                         <div class="name">{{ project.name }}</div>
                         {% with 'project_images/'|add:project.image_name as image_static %}
                           <img src="{% static image_static %}" alt="{{ project.name }}">

@@ -6,6 +6,12 @@ img{
 
 }
 
+/* social buttons */
+.social_buttons img{
+    height: 30px;
+    width: 30px;
+}
+
 /* base.html */
 #content{margin-top: 5px;}
 

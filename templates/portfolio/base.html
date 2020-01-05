@@ -47,11 +47,13 @@
                             </ul>
                         </li>
                     </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        {% if user.is_authenticated %}
-                            <a href="{% url 'logout' %}">Logout</a>
-                        {% endif %}
-                    </form>
+
+                    <div class=" my-2 my-lg-0">
+                        <div class="social_buttons">
+                            <a href="https://www.linkedin.com/in/lee-loftiss/" target="_blank"><img src="{% static 'site_assets/LI-In-Bug.png' %}" alt="LinkedIn" data-toggle="tooltip"  title="contact me"></a>
+                            <a href="https://github.com/kleelof" target="_blank"><img src="{% static 'site_assets/GitHub-Mark-32px.png' %}" alt="GitHub" data-toggle="tooltip"  title="my code"></a>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </div>
