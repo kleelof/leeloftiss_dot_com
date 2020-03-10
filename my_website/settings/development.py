@@ -1,4 +1,5 @@
 from .base import *
 
+SECRET_KEY = 'dssadfo8w734r8387SHF*()UJHASEEFO8YWEREFEWER3'
 DEBUG = True
 ALLOWED_HOSTS = []
