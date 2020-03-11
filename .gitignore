@@ -2,7 +2,5 @@ venv
 db.sqlite3
 .idea
 notes
-my_website/settings/production.py
 __pycache__
 .vscode
-my_website/settings/production.py

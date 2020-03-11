@@ -111,7 +111,6 @@ img{
 }
 
 /* menu */
-.menu_technology{}
 .menu_technology img{
     display: inline-block;
     width: 30px;
@@ -182,8 +181,6 @@ img{
 }
 .view_project .images{
     margin-top: 10px;
-}
-.view_project .images img{
 }
 .view_project .images .image{
     width: 100%;
