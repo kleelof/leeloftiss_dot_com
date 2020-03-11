@@ -1,9 +1,102 @@
+body { 
+    background-color: rgb(40, 40, 40) !important;
+}
 img{
     width: 100%;
 }
 
-#header{
+.center-justified {
+    text-align: justify;
+    text-align-last: center;
+}
+.tab {
+    margin-left: 25px;
+}
 
+#header .leeloftiss {
+    margin-left: 10px;
+}
+
+.pseudo-script {
+    opacity: .40;
+}
+.pseudo-script-lg {
+    font-size: 1.5em;
+}
+.class-name {
+    font-size: 2em;
+    font-weight: bold;
+    color: rgb(35, 178, 235)
+}
+.bracket {
+    color: white
+}
+
+.accessor {
+    color: rgb(255, 0, 200)
+}
+.parameter {
+    color: rgb(255, 100, 0);
+    font-size: 1.1em;
+}
+.parameter a {
+    color: rgb(255, 100, 0);
+}
+.parameter a:hover{
+    color: rgb(255, 100, 0)
+}
+.full-opacity {
+    opacity: 1;
+}
+.constructor {
+    color: rgb(35, 178, 235);
+}
+
+.function-name {
+    color: rgb(141, 197, 57);
+    font-size: 1.3em;
+    opacity: 100% !important;
+}
+.function-name a {
+    color: rgb(141, 197, 57);
+}
+.function-name a:hover{
+    color: rgb(141, 197, 57);
+}
+.external-link {
+    color: yellow;
+    opacity: 100% !important;
+}
+.external-link a {
+    color: yellow;
+}
+.external-link a:hover{
+    color: yellow;
+}
+
+.details-link {
+    color: rgb(35, 178, 235);
+    opacity: 100% !important;
+}
+.details-link a {
+    color: rgb(35, 178, 235);
+}
+.details-link a:hover{
+    color: rgb(35, 178, 235);
+}
+
+.promise {
+    color: rgb(141, 197, 57);
+}
+
+.comment {
+    color: white;
+    font-size: .8em;
+}
+
+.caption{
+    font-size: .7em;
+    color: white;
 }
 
 /* social buttons */
@@ -13,7 +106,9 @@ img{
 }
 
 /* base.html */
-#content{margin-top: 5px;}
+#content{
+    margin-top: 5px;
+}
 
 /* menu */
 .menu_technology{}
@@ -36,7 +131,20 @@ img{
 }
 
 /* projects page */
-.projects_page{}
+.project-description {
+    color: rgb(35, 178, 235);
+    padding-top: 5px;
+    font-size: .8em;
+}
+.project-image {
+    border: 1px solid rgb(255, 100, 0);
+    margin-top: 20px;
+}
+.project-images-bracket {
+    height: 100%;
+}
+
+
 .projects_page .header img{
     width: 150px;
 }
@@ -85,11 +193,6 @@ img{
     display: inline-block;
      border: 1px solid darkgrey;
 }
-.view_project .images .caption{
-    font-size: 12px;
-    text-align: center;
-}
-
 .view_project .technologies img{
     width: 50px;
 }
@@ -112,4 +215,8 @@ img{
 }
 .related_projects .name{
     text-align: center;
+}
+
+@media (min-width: 576px) {
+    html { font-size: 1.5rem; }
 }

@@ -1,123 +1,107 @@
 {% extends 'portfolio/base.html' %}
 {% load static %}
 {% block content %}
+<div class="row">
     <div class="col-12 col-lg-10 view_project">
-        <div class="row">
-            <div class="col-12">
 
-            </div>
-        </div>
         <div class="row">
-            <div class="col-12 col-lg-6">
-                <div class="row d-sm-block d-lg-none">
-                    <div class="col-12">
-                        <h1>{{ project.name }}</h1>
-                        <div class="row technologies">
-                            <div class="col-12">
-                                {% for technology in project.technologies.all %}
-                                    <a href="{% url 'view_by_technology' technology_id=technology.id %}">
-                                        {% with 'badges/'|add:technology.slug as image_static %}
-                                          <img src="{% static image_static %}.png" alt="{{ project.name }}" alt="{{ technology.name }}" data-toggle="tooltip"  title="{{ technology.name }}">
-                                        {% endwith %}
-                                    </a>
-                                {% endfor %}
-                            </div>
-                        </div>
-                        <hr>
-                    </div>
-                </div>
-                <div class="row image_header">
-                    <div class="col-12 image">
-                        {% with 'project_images/'|add:project.image_name as image_static %}
-                          <img src="{% static image_static %}" alt="{{ project.name }}">
-                        {% endwith %}
-                    </div>
-                </div>
-                {% if project.images %}
-                    <div class="row images">
-                        {% for image in project.images.all %}
-                            <div class="col-6 image">
-                                <div class="holder">
-                                    {% if 'MOV' in image.name %}
-                                        {% with 'project_images/'|add:image.name as image_static %}
-                                            <video controls="controls" width="100%" name="Video Name" src="{% static image_static %}"></video>
-                                        {% endwith %}
-                                    {% else %}
-                                        {% with 'project_images/'|add:image.name as image_static %}
-                                          <img src="{% static image_static %}" alt="{{ project.name }}">
-                                        {% endwith %}
-                                    {% endif %}
-                                </div>
-                                <div class="caption">{{ image.caption }}</div>
-                            </div>
-                        {% endfor %}
-                    </div>
-                {% endif %}
-            </div>
-            <div class="col-12 col-lg-6">
-                <div class="row d-none d-lg-block">
-                    <div class="col-12">
-                        <h1>{{ project.name }}</h1>
-                        <div class="row technologies">
-                            <div class="col-12">
-                                {% for technology in project.technologies.all %}
-                                    <a href="{% url 'view_by_technology' technology_id=technology.id %}">
-                                        {% with 'badges/'|add:technology.slug as image_static %}
-                                          <img src="{% static image_static %}.png" alt="{{ project.name }}" alt="{{ technology.name }}" data-toggle="tooltip"  title="{{ technology.name }}">
-                                        {% endwith %}
-                                    </a>
-                                {% endfor %}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {% if project.github_link %}
-                    <hr>
-                    View the code at <a href="{{ project.github_link }}" target="_blank">Github</a>
-                {% endif %}
+            <div class="col-12 comment pseudo-script">
+                /*
                 {% if project.description %}
-                    <hr>
                     {{ project.description | safe }}
-                {% endif %}
-                {% if project.the_ask %}
-                    <hr>
+                {% else %}
                     {{ project.the_ask | safe }}
                 {% endif %}
-                {% if project.challenges %}
-                    <hr>
-                    {{ project.challenges | safe }}
-                {% endif %}
-                {% if project.solution %}
-                    <hr>
-                    {{ project.solution | safe }}
-                {% endif %}
-                {% if project.follow_up %}
-                    <hr>
-                    {{ project.follow_up | safe }}
-                {% endif %}
-                {% if project.has_demo %}
-                    {% if project.demo_link %}
-                        <h5><a href="{{ project.demo_link }}" target="_blank">Try It Out</a></h5>
-                    {% else %}
-                        <h5><a href="{% url 'demo_project' project_slug=project.slug %}" target="_blank">Try It Out</a></h5>
-                    {% endif %}
-                {% endif %}
+                */
+                <span class="bracket">}</span>
             </div>
         </div>
-        {% if related_projects %}
-            <div class="row related_projects">
-                <div class="col-12">
-                    <h5><u>Similar Projects</u></h5>
-                </div>
-                {% for project in related_projects %}
-                    <a href="{% url 'view_project' project_id=project.id %}" class="col-5 col-lg-3 project">
-                        <div class="name">{{ project.name }}</div>
-                        {% with 'project_images/'|add:project.image_name as image_static %}
-                          <img src="{% static image_static %}" alt="{{ project.name }}">
-                        {% endwith %}
-                    </a>
+
+        <div class="row">
+            <div class="col-12 project">
+                <span class="accessor pseudo-script">protected </span>
+                <span class="function-name">{{ project.name }}</span>
+                <span class="accessor pseudo-script">&nbsp;&nbsp;=&nbsp;&nbsp;</span>
+                <span class="bracket pseudo-script">&nbsp;(</span>
+                {% for technology in project.technologies.all %}
+                    <span class="parameter" style="opacity: 1;">
+                        <a href="{% url 'view_by_technology' technology_id=technology.id %}">
+                            {{ technology.name }}
+                        </a>
+                        {% if not forloop.last %}
+                        , 
+                        {% endif %}
+                    </span>
                 {% endfor %}
+                <span class="bracket pseudo-script">)</span>
+                <span class="constructor pseudo-script">&nbsp;&nbsp;=>&nbsp;&nbsp;</span>
+                <span class="bracket pseudo-script">{</span>
+
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10">
+                        <div class="row">
+                            {% if project.github_link %}
+                                <div class="col-12">
+                                    <span class="constructor pseudo-script">const</span>
+                                    <span class="bracket pseudo-script">&nbsp;githubLink</span>
+                                    <span class="accessor pseudo-script">&nbsp;&nbsp;=&nbsp;&nbsp;</span>
+                                    <span class="pseudo-script external-link">
+                                        "<a href="{{project.github_link}}" target="_blank">{{ project.github_link }}</a>"
+                                    </span>
+                                    <span class="bracket pseudo-script">;</span>
+                                </div>
+                            {% endif %}
+                            {% if project.has_demo %}
+                                <div class="col-12">
+                                    <span class="constructor pseudo-script">const</span>
+                                    <span class="bracket pseudo-script">&nbsp;tryMeLink</span>
+                                    <span class="accessor pseudo-script">&nbsp;&nbsp;=&nbsp;&nbsp;</span>
+                                    {% if project.demo_link %}
+                                        <a href="{{ project.demo_link }}" target="_blank">"{{ project.demo_link }}"</a></h5>
+                                    {% else %}
+                                        <a href="{% url 'demo_project' project_slug=project.slug %}" target="_blank">"{% url 'demo_project' project_slug=project.slug %}"</a></h5>
+                                    {% endif %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8">
+                        <div class="row">
+                            <div class="col-12">
+                                {% with 'project_images/'|add:project.image_name as image_static %}
+                                    <img src="{% static image_static %}" alt="{{ project.name }}" class="project-image">
+                                {% endwith %}
+                            </div>
+                            <div class="col-12 project-description">
+                                {% if project.solution %}
+                                    {{ project.solution | safe }}
+                                {% endif %}
+                            </div>
+                            {% for image in project.images.all %}
+                                <div class="col-6 image">
+                                    <div class="holder">
+                                        {% if 'MOV' in image.name %}
+                                            {% with 'project_images/'|add:image.name as image_static %}
+                                                <video controls="controls" width="100%" name="Video Name" src="{% static image_static %}" class="project-image"></video>
+                                            {% endwith %}
+                                        {% else %}
+                                            {% with 'project_images/'|add:image.name as image_static %}
+                                             <img src="{% static image_static %}" alt="{{ project.name }}" class="project-image">
+                                            {% endwith %}
+                                        {% endif %}
+                                    </div>
+                                    <div class="caption center-justified">{{ image.caption }}</div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <span class="bracket pseudo-script">}</span>
             </div>
-        {% endif %}
+        </div>
     </div>
+</div>
 {% endblock %}

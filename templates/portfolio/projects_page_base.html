@@ -1,48 +1,78 @@
 {% extends 'portfolio/base.html' %}
 {% load static %}
 {% block content %}
+<div class="row">
     <div class="col-12 col-lg-10 projects_page">
-        <div class="row header">
-            {% if page %}
-                <div class="col-12">
+        
+        <div class="row">
+            <div class="col-12 comment pseudo-script">
+                /*
+                    {% if page %}
                     {{ page.description | safe }}
-                    <hr>
-                </div>
-            {% elif technology %}
-                <div class="col-12 technology_header">
-                    {% with 'badges/'|add:technology.slug as image_static %}
-                      <img src="{% static image_static %}.png" alt="{{ project.name }}" alt="{{ technology.name }}" data-toggle="tooltip"  title="{{ technology.name }}">
-                    {% endwith %}
-                    <h2>Projects using {{ technology.name }}</h2>
-                    <hr>
-                </div>
-            {% endif %}
-        </div>
-        {% if projects %}
-            <div class="row projects_list">
-                {% for project in projects %}
-                    <div class="col-12 col-lg-6 project">
-                        <div class="name">{{ project.name }}</div>
-                        {% with 'project_images/'|add:project.image_name as image_static %}
-                          <img src="{% static image_static %}" alt="{{ project.name }}">
-                        {% endwith %}
-                        <div class="description">
-                            <p>
-                                {% if project.description %}
-                                    {{ project.description | safe }}
-                                {% else %}
-                                    {{ project.the_ask | safe }}
-                                {% endif %}
-                            </p>
-                        </div>
-                        <div>
-                            <a href="{% url 'view_project' project_id=project.id %}">more...</a>
-                        </div>
-                        <hr>
-                    </div>
-                {% endfor %}
-
+                    {% elif technology %}
+                        Projects using {{ technology.name }}
+                    {% endif %}
+                */
             </div>
-        {% endif %}
+        </div>
+
+        <div class="row">
+            {% for project in projects %}
+                <div class="col-12 project">
+                    <span class="accessor pseudo-script">public </span>
+                    <span class="function-name">
+                        <a href="{% url 'view_project' project_id=project.id %}">
+                            {{ project.name }}
+                        </a>
+                    </span>
+                    <span class="accessor pseudo-script">&nbsp;&nbsp;=&nbsp;&nbsp;</span>
+                    <span class="bracket pseudo-script">&nbsp;(</span>
+                    {% for technology in project.technologies.all %}
+                        <span class="parameter" style="opacity: 1;">
+                            <a href="{% url 'view_by_technology' technology_id=technology.id %}">
+                                {{ technology.name }}
+                            </a>
+                            {% if not forloop.last %}
+                            , 
+                            {% endif %}
+                        </span>
+                    {% endfor %}
+                    <span class="bracket pseudo-script">)</span>
+                    <span class="accessor pseudo-script">:</span>
+                    <span class="promise pseudo-script">&nbsp;Promise</span>
+                    <span class="bracket pseudo-script"><</span>
+                    <span class="details-link">
+                        <a href="{% url 'view_project' project_id=project.id %}">MoreDetails</a>
+                    </span>
+                    <span class="bracket pseudo-script">></span>
+                    <span class="constructor pseudo-script">&nbsp;&nbsp;=>&nbsp;&nbsp;</span>
+                    <span class="bracket pseudo-script">{</span>
+                    
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-6">
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="{% url 'view_project' project_id=project.id %}">
+                                        {% with 'project_images/'|add:project.image_name as image_static %}
+                                            <img src="{% static image_static %}" alt="{{ project.name }}" class="project-image">
+                                        {% endwith %}
+                                    </a>
+                                </div>
+                                <div class="col-12 project-description center-justified">
+                                    {% if project.description %}
+                                        {{ project.description | safe }}
+                                    {% else %}
+                                        {{ project.the_ask | safe }}
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <span class="bracket pseudo-script">}</span>
+                </div>
+            {% endfor %}
+        </div>
     </div>
+</div>
 {% endblock %}
