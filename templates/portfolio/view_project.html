@@ -3,103 +3,97 @@
 {% block content %}
 <div class="row">
     <div class="col-12 col-lg-10 view_project">
-
-        <div class="row">
-            <div class="col-12 comment pseudo-script">
-                /*
-                {% if project.description %}
-                    {{ project.description | safe }}
-                {% else %}
-                    {{ project.the_ask | safe }}
-                {% endif %}
-                */
-                <span class="bracket">}</span>
-            </div>
-        </div>
-
         <div class="row">
             <div class="col-12 project">
-                <span class="accessor pseudo-script">protected </span>
-                <span class="function-name">{{ project.name }}</span>
-                <span class="accessor pseudo-script">&nbsp;&nbsp;=&nbsp;&nbsp;</span>
-                <span class="bracket pseudo-script">&nbsp;(</span>
-                {% for technology in project.technologies.all %}
-                    <span class="parameter" style="opacity: 1;">
-                        <a href="{% url 'view_by_technology' technology_id=technology.id %}">
-                            {{ technology.name }}
-                        </a>
-                        {% if not forloop.last %}
-                        , 
+                <div class="">
+                    <span class=" pseudo-script pseudo-script-red">protected </span>
+                        <span class="pseudo-script-green pseudo-script-lg">{{ project.name }}</span>
+                        <span class=" pseudo-script pseudo-script-red">&nbsp;&nbsp;=&nbsp;&nbsp;</span>
+                        <span class=" pseudo-script pseudo-script-white">(</span>
+                        {% for technology in project.technologies.all %}
+                            <span class="gen-link">
+                                <a href="{% url 'view_by_technology' technology_id=technology.id %}">
+                                    {{ technology.name }}
+                                </a>
+                                {% if not forloop.last %}
+                                <span class="pseudo-script-orange">,</span>
+                                {% endif %}
+                            </span>
+                        {% endfor %}
+                        <span class="pseudo-script pseudo-script-white">)</span>
+                        <span class="pseudo-script pseudo-script-red">&nbsp;&nbsp;=>&nbsp;&nbsp;</span>
+                        <span class="pseudo-script pseudo-script-white">&nbsp;&nbsp;{</span>
+                </div>
+                <div class="row justify-content-center tab">
+                    <div class="col-10 comment pseudo-script">
+                        /*
+                        {% if project.description %}
+                            {{ project.description | safe }}
+                        {% else %}
+                            {{ project.the_ask | safe }}
                         {% endif %}
-                    </span>
-                {% endfor %}
-                <span class="bracket pseudo-script">)</span>
-                <span class="constructor pseudo-script">&nbsp;&nbsp;=>&nbsp;&nbsp;</span>
-                <span class="bracket pseudo-script">{</span>
-
-                <div class="row justify-content-center">
-                    <div class="col-12 col-md-10">
-                        <div class="row">
-                            {% if project.github_link %}
-                                <div class="col-12">
-                                    <span class="constructor pseudo-script">const</span>
-                                    <span class="bracket pseudo-script">&nbsp;githubLink</span>
-                                    <span class="accessor pseudo-script">&nbsp;&nbsp;=&nbsp;&nbsp;</span>
-                                    <span class="pseudo-script external-link">
-                                        "<a href="{{project.github_link}}" target="_blank">{{ project.github_link }}</a>"
-                                    </span>
-                                    <span class="bracket pseudo-script">;</span>
-                                </div>
-                            {% endif %}
-                            {% if project.has_demo %}
-                                <div class="col-12">
-                                    <span class="constructor pseudo-script">const</span>
-                                    <span class="bracket pseudo-script">&nbsp;tryMeLink</span>
-                                    <span class="accessor pseudo-script">&nbsp;&nbsp;=&nbsp;&nbsp;</span>
-                                    {% if project.demo_link %}
-                                        <a href="{{ project.demo_link }}" target="_blank">"{{ project.demo_link }}"</a></h5>
-                                    {% else %}
-                                        <a href="{% url 'demo_project' project_slug=project.slug %}" target="_blank">"{% url 'demo_project' project_slug=project.slug %}"</a></h5>
-                                    {% endif %}
-                                </div>
-                            {% endif %}
-                        </div>
+                        */
                     </div>
                 </div>
-                
-                <div class="row justify-content-center">
-                    <div class="col-12 col-md-8">
-                        <div class="row">
+                <div class="row justify-content-center tab">
+                    <div class="col-12">
+                        <div class="row justify-content-center">
                             <div class="col-12">
-                                {% with 'project_images/'|add:project.image_name as image_static %}
-                                    <img src="{% static image_static %}" alt="{{ project.name }}" class="project-image">
-                                {% endwith %}
+                                <div class="row justify-content-center">
+                                    <div class="col-12 {% if extra_images_count != 0 %} col-md-6 {% else %} col-md-10 {% endif %}">
+                                        {% with 'project_images/'|add:project.image_name as image_static %}
+                                            <img src="{% static image_static %}" alt="{{ project.name }}" class="project-image">
+                                        {% endwith %}
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="row">
+                                            {% for image in project.images.all %}
+                                                <div class="col-6 image">
+                                                    <div class="holder">
+                                                        {% if 'MOV' in image.name %}
+                                                            {% with 'project_images/'|add:image.name as image_static %}
+                                                                <video controls="controls" width="100%" name="Video Name" src="{% static image_static %}" class="project-image"></video>
+                                                            {% endwith %}
+                                                        {% else %}
+                                                            {% with 'project_images/'|add:image.name as image_static %}
+                                                            <img src="{% static image_static %}" alt="{{ project.name }}" class="project-image">
+                                                            {% endwith %}
+                                                        {% endif %}
+                                                    </div>
+                                                    <div class="caption">{{ image.caption }}</div>
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                                
                             </div>
-                            <div class="col-12 project-description">
+                            <div class="col-12 col-md-10 project-description">
                                 {% if project.solution %}
                                     {{ project.solution | safe }}
                                 {% endif %}
                             </div>
-                            {% for image in project.images.all %}
-                                <div class="col-6 image">
-                                    <div class="holder">
-                                        {% if 'MOV' in image.name %}
-                                            {% with 'project_images/'|add:image.name as image_static %}
-                                                <video controls="controls" width="100%" name="Video Name" src="{% static image_static %}" class="project-image"></video>
-                                            {% endwith %}
-                                        {% else %}
-                                            {% with 'project_images/'|add:image.name as image_static %}
-                                             <img src="{% static image_static %}" alt="{{ project.name }}" class="project-image">
-                                            {% endwith %}
-                                        {% endif %}
-                                    </div>
-                                    <div class="caption center-justified">{{ image.caption }}</div>
-                                </div>
-                            {% endfor %}
+                            
                         </div>
                     </div>
                 </div>
-                <span class="bracket pseudo-script">}</span>
+                <div class="row justify-content-center tab">
+                    {% if project.github_link %}
+                        <div class="col-2 gen-link">
+                            <a href="{{project.github_link}}" target="_blank">GitHub</a>
+                        </div>
+                    {% endif %}
+                    {% if project.has_demo %}
+                        <div class="col-2 col-md-1 gen-link">
+                            {% if project.demo_link %}
+                                <a href="{{ project.demo_link }}" target="_blank">Demo</a></h5>
+                            {% else %}
+                                <a href="{% url 'demo_project' project_slug=project.slug %}" target="_blank">Demo</a></h5>
+                            {% endif %}
+                        </div>
+                    {% endif %}
+                </div>
+                <span class="pseudo-script pseudo-script-white tab">&nbsp;&nbsp;}</span>
             </div>
         </div>
     </div>

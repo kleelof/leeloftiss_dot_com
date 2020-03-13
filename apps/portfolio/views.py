@@ -61,7 +61,8 @@ def view_project(request, project_id):
     related_projects = Project.objects.filter(technologies__in=project.technologies.all()).exclude(id=project.id).distinct()
     return render(request, 'portfolio/view_project.html', {
         'project': project,
-        'related_projects': related_projects
+        'related_projects': related_projects,
+        'extra_images_count': project.images.count()
     })
 
 

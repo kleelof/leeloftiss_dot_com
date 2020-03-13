@@ -7,12 +7,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>leeloftiss.com</title>
-    <link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
     <script>
         $(function () {
             $('[data-toggle="tooltip"]').tooltip();
@@ -21,36 +21,39 @@
 </head>
 <body>
     <div class="container-fluid">
-        
         <div class="row">
             <div class="col-12" id="header">
-                <span class="accessor pseudo-script pseudo-script-lg">abstract class</span> 
+                <span class="accessor pseudo-script pseudo-script-red">abstract class</span> 
                 <span class="class-name leeloftiss"> LeeLoftiss </span>
-                <span class="bracket pseudo-script pseudo-script-lg">{</span>
+                <span class="bracket pseudo-script pseudo-script-white pseudo-script-lg">{</span>
            </div>
         </div>
+
+        <nav class="navbar navbar-custom navbar-expand-lg">
+            <span class="navbar-brand">&nbsp;</span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <span class="pseudo-script pseudo-script-white d-none d-lg-block">[</span>
+                <ul class="navbar-nav">
+                    {% for page in menu_info.pages %}
+                        <li class="nav-item gen-link">
+                            <a class="nav-link" href="{% url 'view_projects_page' page_id=page.id %}" style="float: left;">
+                                {{ page.name}}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+                <span class="pseudo-script pseudo-script-white d-none d-lg-block">]</span>
 {% comment %}
-        <div class="row">
-            <div class="col-12 tab">
-                <span class="constructor pseudo-script">const</span>
-                <span class="bracket pseudo-script">&nbsp;github</span>
-                <span class="accessor pseudo-script">&nbsp;&nbsp;=&nbsp;&nbsp;</span>
-                <span class="pseudo-script external-link">
-                    "<a href="https://github.com/kleelof" target="_blank">https://github.com/kleelof</a>"
-                </span>
-                <span class="bracket pseudo-script">;</span>
-            </div>
-            <div class="col-12 tab">
-                <span class="constructor pseudo-script">const</span>
-                <span class="bracket pseudo-script">&nbsp;linkedIn</span>
-                <span class="accessor pseudo-script">&nbsp;&nbsp;=&nbsp;&nbsp;</span>
-                <span class="pseudo-script external-link">
-                    "<a href="https://www.linkedin.com/in/lee-loftiss/" target="_blank">https://www.linkedin.com/in/lee-loftiss/</a>"
-                </span>
-                <span class="bracket pseudo-script">;</span>
-            </div>
-        </div>
+              <div class="float-right">
+                <a href="https://github.com/kleelof" target="_blank"><img src="{% static "site_assets/GitHub-Mark-32px.png" %}"></a>
+                <a href="https://github.com/kleelof" target="_blank"><img src="{% static "site_assets/LI-In-Bug.png" %}"></a>
+              </div>
 {% endcomment %}
+            </div>
+        </nav>
         {% if messages %}
             <div class="row" id="server_messages">
                 <ul class="messages">
@@ -60,22 +63,6 @@
                 </ul>
             </div>
         {% endif %}
-
-        <div class="row">
-            <div class="col-12 tab">
-                <span class="constructor pseudo-script">constructor</span>
-                <span class="bracket pseudo-script">( </span>
-                {% for page in menu_info.pages %}
-                    <span class="parameter">
-                        <a class="" href="{% url 'view_projects_page' page_id=page.id %}">{{ page.name}}</a>
-                        {% if not forloop.last %}
-                        , 
-                        {% endif %}
-                    </span>
-                {% endfor %}
-                <span class="bracket pseudo-script">) {}</span>
-            </div>
-        </div>
         
         <div id="content" class="row">
             <div class="col-12 tab">
@@ -86,7 +73,7 @@
 
         <div class="row">
             <div class="col-12 footer">
-                <span class="bracket pseudo-script pseudo-script-lg">}</span>
+                <span class="bracket pseudo-script pseudo-script-white pseudo-script-lg">}</span>
             </div>
         </div>
     </div>
