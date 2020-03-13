@@ -1,8 +1,27 @@
 body { 
-    background-color: rgb(40, 40, 40) !important;
+    background-color: rgb(30, 30, 30) !important;
 }
 img{
     width: 100%;
+}
+
+.navbar-custom {
+    background-color: rgb(30, 30, 30);
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    padding: 0px 5px;
+    font-size: 1.3em;
+}
+.navbar-custom a:hover{
+    text-decoration: underline;
+}
+
+.navbar-custom .navbar-toggler {
+    background-color: rgb(17, 90, 117) !important;
+}
+.navbar-custom .navbar-toggler-icon {
+    background-color: rgb(70, 0, 50) !important;
 }
 
 .center-justified {
@@ -18,49 +37,42 @@ img{
 }
 
 .pseudo-script {
-    opacity: .40;
+    opacity: .50;
+    font-size: .8em;
 }
 .pseudo-script-lg {
     font-size: 1.5em;
+}
+
+
+.gen-link > a, a:hover {
+    font-size: 1em;
+    color: rgb(255, 100, 0)
 }
 .class-name {
     font-size: 2em;
     font-weight: bold;
     color: rgb(35, 178, 235)
 }
-.bracket {
+.pseudo-script-white {
     color: white
 }
 
-.accessor {
+.pseudo-script-red {
     color: rgb(255, 0, 200)
 }
-.parameter {
+.pseudo-script-orange {
     color: rgb(255, 100, 0);
     font-size: 1.1em;
-}
-.parameter a {
-    color: rgb(255, 100, 0);
-}
-.parameter a:hover{
-    color: rgb(255, 100, 0)
 }
 .full-opacity {
     opacity: 1;
 }
-.constructor {
+.pseudo-script-blue {
     color: rgb(35, 178, 235);
 }
 
-.function-name {
-    color: rgb(141, 197, 57);
-    font-size: 1.3em;
-    opacity: 100% !important;
-}
-.function-name a {
-    color: rgb(141, 197, 57);
-}
-.function-name a:hover{
+.pseudo-script-green {
     color: rgb(141, 197, 57);
 }
 .external-link {
@@ -85,18 +97,19 @@ img{
     color: rgb(35, 178, 235);
 }
 
-.promise {
-    color: rgb(141, 197, 57);
-}
 
 .comment {
     color: white;
     font-size: .8em;
 }
+.comment p {
+    margin-left: 25px;
+}
 
 .caption{
-    font-size: .7em;
-    color: white;
+    font-size: .5em;
+    color: rgb(200, 200, 200);
+    text-align: center;
 }
 
 /* social buttons */
@@ -137,7 +150,6 @@ img{
 }
 .project-image {
     border: 1px solid rgb(255, 100, 0);
-    margin-top: 20px;
 }
 .project-images-bracket {
     height: 100%;
@@ -185,10 +197,6 @@ img{
 .view_project .images .image{
     width: 100%;
     margin-top: 10px;
-}
-.view_project .images .holder{
-    display: inline-block;
-     border: 1px solid darkgrey;
 }
 .view_project .technologies img{
     width: 50px;
