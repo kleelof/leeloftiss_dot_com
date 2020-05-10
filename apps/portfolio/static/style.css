@@ -29,7 +29,11 @@ img{
     text-align-last: center;
 }
 .tab {
-    margin-left: 25px;
+    margin-left: 10px;
+}
+
+.technologies {
+    padding-top: 5px;
 }
 
 #header .leeloftiss {
@@ -44,10 +48,14 @@ img{
     font-size: 1.5em;
 }
 
-
-.gen-link > a, a:hover {
+.gen-link > a {
     font-size: 1em;
-    color: rgb(255, 100, 0)
+    text-decoration: underline !important;
+    color: rgba(255, 100, 0, 1);
+}
+
+.gen-link a:hover {
+    color: rgba(255, 100, 0, .7);
 }
 .class-name {
     font-size: 2em;

@@ -4,35 +4,39 @@
 <div class="row">
     <div class="col-12 col-lg-10 view_project">
         <div class="row">
-            <div class="col-12 project">
-                <div class="">
-                    <span class=" pseudo-script pseudo-script-red">protected </span>
-                        <span class="pseudo-script-green pseudo-script-lg">{{ project.name }}</span>
-                        <span class=" pseudo-script pseudo-script-red">&nbsp;&nbsp;=&nbsp;&nbsp;</span>
-                        <span class=" pseudo-script pseudo-script-white">(</span>
-                        {% for technology in project.technologies.all %}
-                            <span class="gen-link">
-                                <a href="{% url 'view_by_technology' technology_id=technology.id %}">
-                                    {{ technology.name }}
-                                </a>
-                                {% if not forloop.last %}
-                                <span class="pseudo-script-orange">,</span>
-                                {% endif %}
-                            </span>
-                        {% endfor %}
-                        <span class="pseudo-script pseudo-script-white">)</span>
-                        <span class="pseudo-script pseudo-script-red">&nbsp;&nbsp;=>&nbsp;&nbsp;</span>
-                        <span class="pseudo-script pseudo-script-white">&nbsp;&nbsp;{</span>
-                </div>
+            <div class="col-12 col-md-6">
+                <span class="pseudo-script-green pseudo-script-lg">{{ project.name }}</span>
+                <span class=" pseudo-script pseudo-script-red">&nbsp;&nbsp;=&nbsp;&nbsp;</span>
+
+            </div>
+            <div class="col-12 col-md-6 technologies">
+                <span class=" pseudo-script pseudo-script-white">(</span>
+                {% for technology in project.technologies.all %}
+                    <span class="gen-link">
+                        <a href="{% url 'view_by_technology' technology_id=technology.id %}">
+                            {{ technology.name }}
+                        </a>
+                        {% if not forloop.last %}
+                        <span class="pseudo-script-orange">,</span>
+                        {% endif %}
+                    </span>
+                {% endfor %}
+                <span class="pseudo-script pseudo-script-white">)</span>
+                <span class="pseudo-script pseudo-script-red">&nbsp;&nbsp;=>&nbsp;&nbsp;</span>
+                <span class="pseudo-script pseudo-script-white">&nbsp;&nbsp;{</span>
+            </div>
+            <div class="col-12 comment pseudo-script">
+                /*
+                    {% if project.description %}
+                        {{ project.description | safe }}
+                    {% else %}
+                        {{ project.the_ask | safe }}
+                    {% endif %}
+                */
+            </div>   
                 <div class="row justify-content-center tab">
                     <div class="col-10 comment pseudo-script">
-                        /*
-                        {% if project.description %}
-                            {{ project.description | safe }}
-                        {% else %}
-                            {{ project.the_ask | safe }}
-                        {% endif %}
-                        */
+                        
                     </div>
                 </div>
                 <div class="row justify-content-center tab">
