@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apps.portfolio.apps.PortfolioConfig',
     'apps.meal_delivery.apps.MealDeliveryConfig',
+    'apps.teach.apps.TeachConfig',
     'mdrm.apps.MdrmConfig',
 ]
 

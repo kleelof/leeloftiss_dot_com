@@ -1,0 +1,129 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <style>
+        #header img {
+            height: 150px;
+            border: 3px solid rgba(0, 0, 0, .9);
+            float: left;
+        }
+        #header-text {
+            margin-left: 10px;
+            float: left
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row" id="header">
+            <div class="col-12">
+                <img src="{% static 'images/photo.jpg' %}" alt="my photo">
+                <div id="header-text">
+                    <h1>Teacher Lee</h1>
+                    <h5>Software Developer | Teacher | Chef | Musician</h5>
+                </div>
+            </div>
+            <div class="col-12"><hr/></div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h2>About Me</h2>
+                <p>
+                    While teaching, I had the opportunity to put my life-long interest in programming to use by developing games and activities for use in my classroom.
+                    This opportunity led to starting my own freelance software business. Over the years, I have worked on projects with hundreds of clients from around the world using a variety of languages, frameworks and libraries.
+                    Now I want to share my excitement and love for programming with YOU!
+                </p>
+            </div>
+            <div class="col-12">
+                <h2>Why learn to program?</h2>
+                <p>
+                    As I'm sure you know, tech fields are some of the fastest and highest-paying professions you can pursue. This alone is a GREAT reason to consider becoming a software developer.
+                </p>
+                <p>
+                    Learning to program also gives you a tool that can be applied to your own endeavors. Some professions that can be enhanced by knowing basic programming skills are researcher, mathmatician, engineer and entrepreneur. 
+                </p>
+            </div>
+            <div class="col-12">
+                <h2>My Teaching Philosophy</h2>
+                <p>
+                    At the core of my philosophy is the idea that learning to learn is the key to creating a habit of continious improvement.
+                </p>
+                <p>
+                    Whether you want to be a software developer, data engineer or some other tech-based professional, being able to understand and learn new technology is imperative.
+                
+                    When you study with me, you  will be learning the technical knowledge necessary to take a project from idea to fully functioning website.
+                    You will also learn how to approach learning new languages, frameworks and libraries.
+                </p>
+            </div>
+            <div class="col-12">
+                <h2>The Course</h2>
+                <p>
+                    There are 4 courses.
+                </p>
+            </div>
+            <div class="col-12 col-md-6">
+                <h5>1. Introduction to Web Design (6 hours)</h5>
+                <ul>
+                    <li>
+                        Basic HTML / CSS
+                    </li>
+                    <li>
+                        Mobile first development
+                    </li>
+                    <li>
+                        Build a profile website.
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6">
+                <h5>2. Advanced HTML / CSS and Interactivty (8 hours)</h5>
+                <ul>
+                    <li>
+                        Javascript and JQuery
+                    </li>
+                    <li>
+                        Will build an interactive website
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6">
+                <h5>3. Introduction to PHP (10 hours)</h5>
+                <ul>
+                    <li>
+                        Databases
+                    </li>
+                    <li>
+                        Processing web requests
+                    </li>
+                    <li>
+                        Will build task organizer
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-6">
+                <h5>4. PHP for web building (15 hours)</h5>
+                <ul>
+                    <li>
+                        Build on Introduction to PHP
+                    </li>
+                    <li>
+                        Web security, advanced programming principles
+                    </li>
+                    <li>
+                        Will build a social website.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
